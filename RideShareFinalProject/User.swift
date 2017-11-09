@@ -56,8 +56,8 @@ class User{
         self.photo = photo
         self.studentDescription = studentDescription
         self.userVehicle = userVehicle
-        self.totalPassRating = totalPassRating
-        self.totalDriverRating = totalDriverRating
+        //self.totalPassRating = totalPassRating
+        //self.totalDriverRating = totalDriverRating
         
     }
     
