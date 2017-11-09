@@ -26,20 +26,19 @@ class User{
     var studentDescription: String
     var userVehicle: Vehicle
     
-    var passengerRating: Double
-    var driverRating: Double
+    var pass1star: Int = 0
+    var pass2star: Int = 0
+    var pass3star: Int = 0
+    var pass4star: Int = 0
+    var pass5star: Int = 0
+    var totalPassRating: Double = 0
     
-    var pass1Star: Int
-    var pass2Star: Int
-    var pass3Star: Int
-    var pass4Star: Int
-    var pass5Star: Int
-    
-    var drive1Star: Int
-    var drive2Star: Int
-    var drive3Star: Int
-    var drive4Star: Int
-    var drive5Star: Int
+    var driver1star: Int = 0
+    var driver2star: Int = 0
+    var driver3star: Int = 0
+    var driver4star: Int = 0
+    var driver5star: Int = 0
+    var totalDriverRating: Double = 0
     
     
     
@@ -57,24 +56,54 @@ class User{
         self.photo = photo
         self.studentDescription = studentDescription
         self.userVehicle = userVehicle
-        self.passengerRating = passengerRating
-        self.driverRating = driverRating
+        self.totalPassRating = totalPassRating
+        self.totalDriverRating = totalDriverRating
         
+    }
+    
+    func calculateDriverRating(driver1star: Int, driver2star: Int, driver3star: Int, driver4star: Int, driver5star: Int){
+        
+        totalDriverRating = (5*driver5star + 4*driver4star + 3*driver3star + 2*driver2star + 1*driver1star) / (driver5star+driver4star+driver3star+driver2star+driver1star)
+    }
+    
+    func driverRating(driverRating: Int) -> Double {
+        if driverRating == 1 {
+            calculateDriverRating(driver1star: driver1star + 1, driver2star: driver2star, driver3star: driver3star, driver4star: driver4star, driver5star: driver5star)
+        } else if driverRating == 2 {
+            calculateDriverRating(driver1star: driver1star, driver2star: driver2star + 1, driver3star: driver3star, driver4star: driver4star, driver5star: driver5star)
+        } else if driverRating == 3 {
+            calculateDriverRating(driver1star: driver1star, driver2star: driver2star, driver3star: driver3star + 1, driver4star: driver4star, driver5star: driver5star)
+        } else if driverRating == 4 {
+            calculateDriverRating(driver1star: driver1star, driver2star: driver2star, driver3star: driver3star, driver4star: driver4star + 1, driver5star: driver5star)
+        } else {
+            calculateDriverRating(driver1star: driver1star, driver2star: driver2star, driver3star: driver3star, driver4star: driver4star, driver5star: driver5star + 1)
+        }
+        return totalDriverRating;
+    }
+    
+    func calculatePassengerRating(pass1star: Int, pass2star: Int, pass3star: Int, pass4star: Int, pass5star: Int){
+        
+        totalPassRating = (5*pass5star + 4*pass4star + 3*pass3star + 2*pass2star + 1*pass1star) / (pass5star+pass4star+pass3star+pass2star+pass1star)
+    }
+    
+    func passengerRating(passRating: Int) -> Double {
+        if passRating == 1 {
+            calculatePassengerRating(pass1star: pass1star + 1, pass2star: pass2star, pass3star: pass3star, pass4star: pass4star, pass5star: pass5star)
+        } else if passRating == 2 {
+            calculatePassengerRating(pass1star: pass1star, pass2star: pass2star + 1, pass3star: pass3star, pass4star: pass4star, pass5star: pass5star)
+        } else if passRating == 3 {
+            calculatePassengerRating(pass1star: pass1star, pass2star: pass2star, pass3star: pass3star + 1, pass4star: pass4star, pass5star: pass5star)
+        } else if passRating == 4 {
+            calculatePassengerRating(pass1star: pass1star, pass2star: pass2star, pass3star: pass3star, pass4star: pass4star + 1, pass5star: pass5star)
+        } else {
+            calculatePassengerRating(pass1star: pass1star, pass2star: pass2star, pass3star: pass3star, pass4star: pass4star, pass5star: pass5star + 1)
+        }
+        return totalPassRating;
     }
     
     
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+
     
 
 enum Gender{
