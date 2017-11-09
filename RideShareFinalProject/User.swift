@@ -75,17 +75,7 @@ class User{
      }
      */
     
-    func calculateRating (1star: Int, 2star: Int, 3star: Int, 4star: Int, 5star: Int) -> Double{
-        if rating == 0{
-            return newRating
-            count
-        }
-        else{
-            
-        }
-    }
     
-}
 
 enum Gender{
     case MALE
