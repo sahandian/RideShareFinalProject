@@ -16,21 +16,17 @@ enum Location{
     case Columbia
 }
 
-struct riderTrip{
-    //    Trip created by the rider needing a driver, others can request to join as passengers
+
+struct driverTrip{
+    //    Trip created by drivers, riders can request to join as passengers
+    
     var locationFrom: Location
     var destination: Location
     var startDate: Date
-    var departureTime: Date
     var returnDate: Date
+    var DepartureTime: Date
     var returnTime: Date
-    var passengerNames: [User]
-    var numberOfPassengers: Int
+    var seatsAvailable: Int
     var comments: String
-    
-    
-}
-
-struct driverTrip{
     
 }

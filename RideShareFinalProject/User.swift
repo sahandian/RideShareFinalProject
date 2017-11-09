@@ -29,6 +29,19 @@ class User{
     var passengerRating: Double
     var driverRating: Double
     
+    var pass1Star: Int
+    var pass2Star: Int
+    var pass3Star: Int
+    var pass4Star: Int
+    var pass5Star: Int
+    
+    var drive1Star: Int
+    var drive2Star: Int
+    var drive3Star: Int
+    var drive4Star: Int
+    var drive5Star: Int
+    
+    
     
     init(firstName: String, middleName: String, lastName: String, dob: Date, gender: Gender, email: String,
          major: String, classRank: String, photo: UIImage, studentDescription: String, userVehicle: Vehicle, passengerRating: Double, driverRating: Double){
@@ -62,6 +75,16 @@ class User{
      }
      */
     
+    func calculateRating (1star: Int, 2star: Int, 3star: Int, 4star: Int, 5star: Int) -> Double{
+        if rating == 0{
+            return newRating
+            count
+        }
+        else{
+            
+        }
+    }
+    
 }
 
 enum Gender{
@@ -84,4 +107,5 @@ enum Cargo{
     case MEDIUM
     case LARGE
 }
+
 
