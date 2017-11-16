@@ -27,6 +27,7 @@ struct driverTrip{
     var DepartureTime: Date
     var returnTime: Date
     var seatsAvailable: Int
+    var price: Int
     var comments: String
     
 }
