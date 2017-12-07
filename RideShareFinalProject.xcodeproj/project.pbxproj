@@ -17,6 +17,10 @@
 		5D1CE50D1FB4D895005DE0FF /* RideShareFinalProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE50C1FB4D895005DE0FF /* RideShareFinalProjectUITests.swift */; };
 		5D1CE51B1FB4DA40005DE0FF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE51A1FB4DA40005DE0FF /* User.swift */; };
 		5D1CE51D1FB4DCF5005DE0FF /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */; };
+		BF4FD3751FD735E200515C59 /* DashBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FD3741FD735E200515C59 /* DashBoardTableViewCell.swift */; };
+		BFA365371FD7D61F00466517 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA365361FD7D61F00466517 /* Default-568h@2x.png */; };
+		BFA365391FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA365381FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift */; };
+		BFFDBBC51FD86C2000921CC2 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFDBBC41FD86C2000921CC2 /* DashBoardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		5D1CE50E1FB4D895005DE0FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D1CE51A1FB4DA40005DE0FF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		BF4FD3741FD735E200515C59 /* DashBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardTableViewCell.swift; sourceTree = "<group>"; };
+		BFA365361FD7D61F00466517 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BFA365381FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardNotificationTableViewCell.swift; sourceTree = "<group>"; };
+		BFFDBBC41FD86C2000921CC2 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 		5D1CE4DD1FB4D894005DE0FF = {
 			isa = PBXGroup;
 			children = (
+				BFA365361FD7D61F00466517 /* Default-568h@2x.png */,
 				5D1CE4E81FB4D894005DE0FF /* RideShareFinalProject */,
 				5D1CE5001FB4D894005DE0FF /* RideShareFinalProjectTests */,
 				5D1CE50B1FB4D895005DE0FF /* RideShareFinalProjectUITests */,
@@ -103,11 +112,14 @@
 		5D1CE4E81FB4D894005DE0FF /* RideShareFinalProject */ = {
 			isa = PBXGroup;
 			children = (
-				5D1CE4E91FB4D894005DE0FF /* AppDelegate.swift */,
 				5D1CE4EB1FB4D894005DE0FF /* ViewController.swift */,
+				BF4FD3741FD735E200515C59 /* DashBoardTableViewCell.swift */,
+				BFA365381FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift */,
+				BFFDBBC41FD86C2000921CC2 /* DashBoardViewController.swift */,
 				5D1CE51A1FB4DA40005DE0FF /* User.swift */,
 				5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */,
 				5D1CE4ED1FB4D894005DE0FF /* Main.storyboard */,
+				5D1CE4E91FB4D894005DE0FF /* AppDelegate.swift */,
 				5D1CE4F31FB4D894005DE0FF /* Assets.xcassets */,
 				5D1CE4F51FB4D894005DE0FF /* LaunchScreen.storyboard */,
 				5D1CE4F81FB4D894005DE0FF /* Info.plist */,
@@ -242,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D1CE4F71FB4D894005DE0FF /* LaunchScreen.storyboard in Resources */,
+				BFA365371FD7D61F00466517 /* Default-568h@2x.png in Resources */,
 				5D1CE4F41FB4D894005DE0FF /* Assets.xcassets in Resources */,
 				5D1CE4EF1FB4D894005DE0FF /* Main.storyboard in Resources */,
 			);
@@ -270,9 +283,12 @@
 			files = (
 				5D1CE51D1FB4DCF5005DE0FF /* Trip.swift in Sources */,
 				5D1CE51B1FB4DA40005DE0FF /* User.swift in Sources */,
+				BF4FD3751FD735E200515C59 /* DashBoardTableViewCell.swift in Sources */,
 				5D1CE4F21FB4D894005DE0FF /* RideShareFinalProject.xcdatamodeld in Sources */,
 				5D1CE4EC1FB4D894005DE0FF /* ViewController.swift in Sources */,
+				BFA365391FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift in Sources */,
 				5D1CE4EA1FB4D894005DE0FF /* AppDelegate.swift in Sources */,
+				BFFDBBC51FD86C2000921CC2 /* DashBoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K752ZVTXK3;
+				DEVELOPMENT_TEAM = 4FNJNUQ3AD;
 				INFOPLIST_FILE = RideShareFinalProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.mail.missouri.RideShareFinalProject;
@@ -454,7 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K752ZVTXK3;
+				DEVELOPMENT_TEAM = 4FNJNUQ3AD;
 				INFOPLIST_FILE = RideShareFinalProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.mail.missouri.RideShareFinalProject;
