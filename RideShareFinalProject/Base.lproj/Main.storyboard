@@ -1,29 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LWz-Dz-mhf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qCD-dd-92t">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Ride-->
+        <!--Search-->
         <scene sceneID="gRo-Kb-g5c">
             <objects>
-                <viewController id="qCD-dd-92t" sceneMemberID="viewController">
+                <viewController title="Search" id="qCD-dd-92t" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tDv-ob-zsb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWD-EF-7P1">
+                                <rect key="frame" x="35" y="91" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fp7-5A-kcM"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ride" id="oxi-TQ-Q8F"/>
+                    <navigationItem key="navigationItem" title="Ride" id="8iN-go-UeV">
+                        <connections>
+                            <outlet property="titleView" destination="eWD-EF-7P1" id="mOx-sX-k2w"/>
+                        </connections>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOg-id-3Tb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="656.79999999999995" y="-41.829085457271368"/>
+            <point key="canvasLocation" x="1494" y="-43"/>
         </scene>
         <!--Profile-->
         <scene sceneID="It0-st-zoY">
@@ -266,7 +281,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exampleImage1.png" translatesAutoresizingMaskIntoConstraints="NO" id="V4n-ab-63Z">
-                                                    <rect key="frame" x="15" y="29" width="50" height="50"/>
+                                                    <rect key="frame" x="8" y="29" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="LYg-Jh-lQ6"/>
                                                         <constraint firstAttribute="height" constant="50" id="frv-Ne-2si"/>
@@ -279,7 +294,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" text="message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Frb-tM-LRL">
-                                                    <rect key="frame" x="105" y="18" width="157" height="78"/>
+                                                    <rect key="frame" x="98" y="18" width="164" height="78"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -405,7 +420,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="qfd-No-jxe" kind="relationship" relationship="viewControllers" id="SUt-CO-zYZ"/>
-                        <segue destination="qCD-dd-92t" kind="relationship" relationship="viewControllers" id="iPP-4v-aFM"/>
+                        <segue destination="qZg-Kf-DZf" kind="relationship" relationship="viewControllers" id="iPP-4v-aFM"/>
                         <segue destination="kri-s0-2si" kind="relationship" relationship="viewControllers" id="boS-LY-xCU"/>
                         <segue destination="ZlN-Qr-PzX" kind="relationship" relationship="viewControllers" id="Z1j-E4-7aI"/>
                     </connections>
@@ -434,6 +449,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6sF-HD-kCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="656" y="-710.64467766116945"/>
+        </scene>
+        <!--Ride-->
+        <scene sceneID="TMU-HQ-IVA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qZg-Kf-DZf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Ride" id="oxi-TQ-Q8F"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LSL-Ga-t6p">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qCD-dd-92t" kind="relationship" relationship="rootViewController" id="r56-Nm-RZV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bmH-Sm-WjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656" y="-42.278860569715143"/>
         </scene>
     </scenes>
     <resources>
