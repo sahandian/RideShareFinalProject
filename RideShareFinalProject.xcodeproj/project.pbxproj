@@ -18,6 +18,7 @@
 		5D1CE51B1FB4DA40005DE0FF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE51A1FB4DA40005DE0FF /* User.swift */; };
 		5D1CE51D1FB4DCF5005DE0FF /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */; };
 		BF4FD3751FD735E200515C59 /* DashBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FD3741FD735E200515C59 /* DashBoardTableViewCell.swift */; };
+		BF5C44EB1FDA8D6400FE8E4F /* TripInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5C44EA1FDA8D6400FE8E4F /* TripInformationViewController.swift */; };
 		BFA365371FD7D61F00466517 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA365361FD7D61F00466517 /* Default-568h@2x.png */; };
 		BFA365391FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA365381FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift */; };
 		BFFDBBC51FD86C2000921CC2 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFDBBC41FD86C2000921CC2 /* DashBoardViewController.swift */; };
@@ -58,6 +59,7 @@
 		5D1CE51A1FB4DA40005DE0FF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		BF4FD3741FD735E200515C59 /* DashBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardTableViewCell.swift; sourceTree = "<group>"; };
+		BF5C44EA1FDA8D6400FE8E4F /* TripInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInformationViewController.swift; sourceTree = "<group>"; };
 		BFA365361FD7D61F00466517 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BFA365381FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardNotificationTableViewCell.swift; sourceTree = "<group>"; };
 		BFFDBBC41FD86C2000921CC2 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				5D1CE4EB1FB4D894005DE0FF /* ViewController.swift */,
 				BF4FD3741FD735E200515C59 /* DashBoardTableViewCell.swift */,
 				BFA365381FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift */,
+				BF5C44EA1FDA8D6400FE8E4F /* TripInformationViewController.swift */,
 				BFFDBBC41FD86C2000921CC2 /* DashBoardViewController.swift */,
 				5D1CE51A1FB4DA40005DE0FF /* User.swift */,
 				5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */,
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5C44EB1FDA8D6400FE8E4F /* TripInformationViewController.swift in Sources */,
 				5D1CE51D1FB4DCF5005DE0FF /* Trip.swift in Sources */,
 				5D1CE51B1FB4DA40005DE0FF /* User.swift in Sources */,
 				BF4FD3751FD735E200515C59 /* DashBoardTableViewCell.swift in Sources */,
