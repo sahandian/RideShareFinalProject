@@ -17,6 +17,7 @@
 		5D1CE50D1FB4D895005DE0FF /* RideShareFinalProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE50C1FB4D895005DE0FF /* RideShareFinalProjectUITests.swift */; };
 		5D1CE51B1FB4DA40005DE0FF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE51A1FB4DA40005DE0FF /* User.swift */; };
 		5D1CE51D1FB4DCF5005DE0FF /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */; };
+		5D1CE55E1FDCDC33005DE0FF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE55D1FDCDC33005DE0FF /* SearchViewController.swift */; };
 		BF4FD3751FD735E200515C59 /* DashBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FD3741FD735E200515C59 /* DashBoardTableViewCell.swift */; };
 		BFA365371FD7D61F00466517 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA365361FD7D61F00466517 /* Default-568h@2x.png */; };
 		BFA365391FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA365381FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift */; };
@@ -57,6 +58,7 @@
 		5D1CE50E1FB4D895005DE0FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D1CE51A1FB4DA40005DE0FF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		5D1CE55D1FDCDC33005DE0FF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BF4FD3741FD735E200515C59 /* DashBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardTableViewCell.swift; sourceTree = "<group>"; };
 		BFA365361FD7D61F00466517 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BFA365381FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardNotificationTableViewCell.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				5D1CE51A1FB4DA40005DE0FF /* User.swift */,
 				5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */,
 				5D1CE4ED1FB4D894005DE0FF /* Main.storyboard */,
+				5D1CE55D1FDCDC33005DE0FF /* SearchViewController.swift */,
 				5D1CE4E91FB4D894005DE0FF /* AppDelegate.swift */,
 				5D1CE4F31FB4D894005DE0FF /* Assets.xcassets */,
 				5D1CE4F51FB4D894005DE0FF /* LaunchScreen.storyboard */,
@@ -284,6 +287,7 @@
 				5D1CE51D1FB4DCF5005DE0FF /* Trip.swift in Sources */,
 				5D1CE51B1FB4DA40005DE0FF /* User.swift in Sources */,
 				BF4FD3751FD735E200515C59 /* DashBoardTableViewCell.swift in Sources */,
+				5D1CE55E1FDCDC33005DE0FF /* SearchViewController.swift in Sources */,
 				5D1CE4F21FB4D894005DE0FF /* RideShareFinalProject.xcdatamodeld in Sources */,
 				5D1CE4EC1FB4D894005DE0FF /* ViewController.swift in Sources */,
 				BFA365391FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift in Sources */,
