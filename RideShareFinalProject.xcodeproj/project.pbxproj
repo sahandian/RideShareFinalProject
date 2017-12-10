@@ -309,6 +309,7 @@
 				5D1CE51D1FB4DCF5005DE0FF /* Trip.swift in Sources */,
 				5D1CE51B1FB4DA40005DE0FF /* User.swift in Sources */,
 				BF4FD3751FD735E200515C59 /* DashBoardTableViewCell.swift in Sources */,
+				5D1CE55E1FDCDC33005DE0FF /* SearchViewController.swift in Sources */,
 				5D1CE4F21FB4D894005DE0FF /* RideShareFinalProject.xcdatamodeld in Sources */,
 				5D1CE4EC1FB4D894005DE0FF /* ViewController.swift in Sources */,
 				BFA365391FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift in Sources */,
