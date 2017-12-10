@@ -7,12 +7,41 @@
 //
 
 import UIKit
-
+import CloudKit
 class TripInformationViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var fullName: UILabel!
+    @IBOutlet weak var start: UILabel!
+    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var destination: UILabel!
+    @IBOutlet weak var departure: UILabel!
+    @IBOutlet weak var carModel: UILabel!
+    
+    //var trip = driverTrip()
+    var tripModel: CKRecord?{
+        didSet{
+            updateUI()
+        }
+    }
+    
+    private func updateUI(){
+        if email != nil{
+            email.text = (tripModel?["email"] as! String)
+            start.text = (tripModel?["startLocation"] as! String)
+            destination.text = (tripModel?["destinationLocation"] as! String)
+            let departureTime = (tripModel?["departureTime"] as! Date)
+            let formatter = DateFormatter()
+            formatter.dateStyle = .short
+            formatter.dateStyle = .short
+            departure.text = formatter.string(from: departureTime)
+            carModel.text = (tripModel?["car"] as! String)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        updateUI()
         // Do any additional setup after loading the view.
     }
 

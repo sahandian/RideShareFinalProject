@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import CloudKit
 
 class DashBoardViewController: UIViewController, UITableViewDataSource,UITableViewDelegate {
     
     @IBOutlet private weak var tableView: UITableView!
     
+    var trip = [CKRecord]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        retieveData()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -25,6 +30,13 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
         return 2
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0{
+            if trip.count < 4{
+                return trip.count
+            }else{
+                return 3
+            }
+        }
         return 4
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,9 +45,10 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
             if indexPath.row == 3{
                 deque = tableView.dequeueReusableCell(withIdentifier: "showMoreCell", for: indexPath)
             }else{
+                let data = trip[indexPath.row]
                 deque = tableView.dequeueReusableCell(withIdentifier: "myFirstCell", for: indexPath)
                 if let cell = deque as? DashBoardTableViewCell{
-                    cell.infoToBeShown = "Data setted"
+                    cell.infoToBeShown = data
                 }
             }
         }else{
@@ -48,16 +61,23 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 1{
-            return "Notifications"
-        }else{
+        if section == 0{
             return "Upcoming trips"
+        }else{
+            return "Notifications"
         }
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // "Show more" row to be 30 px high
+        if indexPath.section == 0{
+            if indexPath.row == 3{
+                return 30
+            }
+        }
         return 70
     }
-
+    // Swipe functionality
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title:  "Delete", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             print("OK, you have delete the request.")
@@ -65,7 +85,6 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
         })
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
-    
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let confirmAction = UIContextualAction(style: .normal, title:  "Confirm", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
@@ -76,6 +95,7 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
         return UISwipeActionsConfiguration(actions: [confirmAction])
     }
     
+    // Switching between views
     @IBAction func viewPastActionsToggle(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0{
             
@@ -85,15 +105,41 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
             
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let identifier = segue.identifier{
+            switch identifier{
+            case "showMoreUpComingEvents":
+                break
+            case "showTripInfomation":
+                if let cell = sender as? DashBoardTableViewCell{
+                    if let indexPath = tableView.indexPath(for: cell){
+                        if let segueMCV = segue.destination as? TripInformationViewController{
+                            let data = trip[indexPath.row]
+                            segueMCV.tripModel = data
+                        }
+                    }
+                }
+                break
+            default:
+                break
+            }
+        }
     }
-    */
-
+    func retieveData(){
+        CKContainer.default().fetchUserRecordID { (userRecordID, error) in
+            let predicate = NSPredicate(format: "creatorUserRecordID = %@", userRecordID!)
+            let query = CKQuery(recordType: "Trip", predicate: predicate)
+            let db = CKContainer.default().publicCloudDatabase
+            db.perform(query, inZoneWith: nil) { (records, error) in
+                if error == nil{
+                    guard let records = records else{ return }
+                    self.trip = records
+                    DispatchQueue.main.async{
+                        self.tableView.reloadData()
+                    }
+                }
+            }
+        }
+    }
 }

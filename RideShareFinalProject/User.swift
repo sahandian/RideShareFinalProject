@@ -59,7 +59,6 @@ class User{
         self.userVehicle = userVehicle
         //self.totalPassRating = totalPassRating
         //self.totalDriverRating = totalDriverRating
-        
     }
     enum Gender{
         case MALE
