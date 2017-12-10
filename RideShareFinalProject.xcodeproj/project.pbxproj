@@ -19,6 +19,8 @@
 		5D1CE51B1FB4DA40005DE0FF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE51A1FB4DA40005DE0FF /* User.swift */; };
 		5D1CE51D1FB4DCF5005DE0FF /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */; };
 		BF4FD3751FD735E200515C59 /* DashBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FD3741FD735E200515C59 /* DashBoardTableViewCell.swift */; };
+		BF5C44EB1FDA8D6400FE8E4F /* TripInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5C44EA1FDA8D6400FE8E4F /* TripInformationViewController.swift */; };
+		BF7788001FDCAA400012997F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7787FF1FDCAA400012997F /* CloudKit.framework */; };
 		BFA365371FD7D61F00466517 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA365361FD7D61F00466517 /* Default-568h@2x.png */; };
 		BFA365391FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA365381FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift */; };
 		BFFDBBC51FD86C2000921CC2 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFDBBC41FD86C2000921CC2 /* DashBoardViewController.swift */; };
@@ -60,6 +62,9 @@
 		5D1CE51A1FB4DA40005DE0FF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		BF4FD3741FD735E200515C59 /* DashBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardTableViewCell.swift; sourceTree = "<group>"; };
+		BF5C44EA1FDA8D6400FE8E4F /* TripInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInformationViewController.swift; sourceTree = "<group>"; };
+		BF7787FF1FDCAA400012997F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		BF90095A1FDCA85C00C2E8A0 /* RideShareFinalProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RideShareFinalProject.entitlements; sourceTree = "<group>"; };
 		BFA365361FD7D61F00466517 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BFA365381FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardNotificationTableViewCell.swift; sourceTree = "<group>"; };
 		BFFDBBC41FD86C2000921CC2 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7788001FDCAA400012997F /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +104,7 @@
 				5D1CE5001FB4D894005DE0FF /* RideShareFinalProjectTests */,
 				5D1CE50B1FB4D895005DE0FF /* RideShareFinalProjectUITests */,
 				5D1CE4E71FB4D894005DE0FF /* Products */,
+				BF90095B1FDCA85E00C2E8A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,9 +121,11 @@
 		5D1CE4E81FB4D894005DE0FF /* RideShareFinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				BF90095A1FDCA85C00C2E8A0 /* RideShareFinalProject.entitlements */,
 				5D1CE4EB1FB4D894005DE0FF /* ViewController.swift */,
 				BF4FD3741FD735E200515C59 /* DashBoardTableViewCell.swift */,
 				BFA365381FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift */,
+				BF5C44EA1FDA8D6400FE8E4F /* TripInformationViewController.swift */,
 				BFFDBBC41FD86C2000921CC2 /* DashBoardViewController.swift */,
 				5D1CE51A1FB4DA40005DE0FF /* User.swift */,
 				5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */,
@@ -147,6 +156,14 @@
 				5D1CE50E1FB4D895005DE0FF /* Info.plist */,
 			);
 			path = RideShareFinalProjectUITests;
+			sourceTree = "<group>";
+		};
+		BF90095B1FDCA85E00C2E8A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF7787FF1FDCAA400012997F /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +235,14 @@
 					5D1CE4E51FB4D894005DE0FF = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					5D1CE4FC1FB4D894005DE0FF = {
 						CreatedOnToolsVersion = 9.0;
@@ -284,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5C44EB1FDA8D6400FE8E4F /* TripInformationViewController.swift in Sources */,
 				5D1CE51D1FB4DCF5005DE0FF /* Trip.swift in Sources */,
 				5D1CE51B1FB4DA40005DE0FF /* User.swift in Sources */,
 				BF4FD3751FD735E200515C59 /* DashBoardTableViewCell.swift in Sources */,
@@ -458,11 +484,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RideShareFinalProject/RideShareFinalProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4FNJNUQ3AD;
 				INFOPLIST_FILE = RideShareFinalProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.mail.missouri.RideShareFinalProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RideshareTeam.RideShareFinalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -473,11 +500,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RideShareFinalProject/RideShareFinalProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4FNJNUQ3AD;
 				INFOPLIST_FILE = RideShareFinalProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.mail.missouri.RideShareFinalProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RideshareTeam.RideShareFinalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
