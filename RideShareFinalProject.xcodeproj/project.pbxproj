@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E30ADF71FD9D29A0080CAD0 /* DriveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E30ADF61FD9D29A0080CAD0 /* DriveTableViewCell.swift */; };
 		5D1CE4EA1FB4D894005DE0FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE4E91FB4D894005DE0FF /* AppDelegate.swift */; };
 		5D1CE4EC1FB4D894005DE0FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE4EB1FB4D894005DE0FF /* ViewController.swift */; };
 		5D1CE4EF1FB4D894005DE0FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1CE4ED1FB4D894005DE0FF /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E30ADF61FD9D29A0080CAD0 /* DriveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveTableViewCell.swift; sourceTree = "<group>"; };
 		5D1CE4E61FB4D894005DE0FF /* RideShareFinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RideShareFinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1CE4E91FB4D894005DE0FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D1CE4EB1FB4D894005DE0FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				5D1CE51A1FB4DA40005DE0FF /* User.swift */,
 				5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */,
 				5D1CE4ED1FB4D894005DE0FF /* Main.storyboard */,
+				2E30ADF61FD9D29A0080CAD0 /* DriveTableViewCell.swift */,
 				5D1CE4E91FB4D894005DE0FF /* AppDelegate.swift */,
 				5D1CE4F31FB4D894005DE0FF /* Assets.xcassets */,
 				5D1CE4F51FB4D894005DE0FF /* LaunchScreen.storyboard */,
@@ -314,6 +317,7 @@
 				5D1CE4EC1FB4D894005DE0FF /* ViewController.swift in Sources */,
 				BFA365391FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift in Sources */,
 				5D1CE4EA1FB4D894005DE0FF /* AppDelegate.swift in Sources */,
+				2E30ADF71FD9D29A0080CAD0 /* DriveTableViewCell.swift in Sources */,
 				BFFDBBC51FD86C2000921CC2 /* DashBoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
