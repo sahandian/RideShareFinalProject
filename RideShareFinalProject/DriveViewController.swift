@@ -33,6 +33,9 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var carModel: UITextField!
     @IBOutlet weak var carYear: UITextField!
     @IBOutlet weak var license: UITextField!
+    @IBOutlet weak var nameLabel: UITextField!
+    
+    namelabel.text
     
     
     override func viewDidLoad() {
