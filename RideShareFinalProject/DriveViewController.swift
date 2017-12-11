@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CloudKit
 class DriveViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var firstName: UITextField!
@@ -35,9 +35,103 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var license: UITextField!
     @IBOutlet weak var nameLabel: UITextField!
     
-    namelabel.text
+    
+    //for date picker for depature
+    let datePicker = UIDatePicker()
+    
+    func createDatePicker(){
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(datePressed))
+        
+        toolbar.setItems([done], animated: false)
+        departure.inputAccessoryView = toolbar
+        departure.inputView = datePicker
+        
+        datePicker.datePickerMode = .date
+    }
+    
+    @objc func datePressed(){
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        
+        let dateString = formatter.string(from: datePicker.date)
+        
+        departure.text = "\(dateString)"
+        self.viewDidLoad()
+    }
     
     
+    //for date picker for depature
+    let timePicker = UIDatePicker()
+    
+    func createTimePicker(){
+        let toolbar2 = UIToolbar()
+        toolbar2.sizeToFit()
+        
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(timePressed))
+        
+        toolbar2.setItems([done], animated: false)
+        time.inputAccessoryView = toolbar2
+        time.inputView = timePicker
+        
+        timePicker.datePickerMode = .date
+    }
+    
+    @objc func timePressed(){
+        let formatter = DateFormatter()
+        formatter.dateStyle = .none
+        formatter.timeStyle = .medium
+        
+    
+        let timeString = formatter.string(from: timePicker.date)
+        
+        
+        time.text = "\(timeString)"
+        self.viewDidLoad()
+    }
+    
+    
+    @IBAction func saveButton(_ sender: UIButton) {
+        print("Save button clikced")
+        let trip = CKRecord(recordType: "Trip")
+        trip.setValue(firstName.text!, forKey: "firstName")
+        trip.setValue(lastName.text!, forKey: "lasName")
+        trip.setValue(email.text!, forKey: "email")
+        trip.setValue(timePicker.date, forKey: "departure")
+        trip.setValue(timePicker.date, forKey: "time")
+        
+        trip.setValue(address.text!, forKey: "address")
+        trip.setValue(city.text!, forKey: "city")
+        trip.setValue(state.text!, forKey: "state")
+        trip.setValue(zip.text!, forKey: "zip")
+        
+        trip.setValue(address2.text!, forKey: "address2")
+        trip.setValue(city2.text!, forKey: "city2")
+        trip.setValue(state2.text!, forKey: "state2")
+        trip.setValue(zip2.text!, forKey: "zip2")
+        
+        let seatNumber = Int64(seatsAvailable.text!)
+        trip.setValue(seatNumber, forKey: "seatsAvailable")
+        
+        trip.setValue(carMake.text!, forKey: "carMake")
+        trip.setValue(carModel.text!, forKey: "carModel")
+        
+        let carYearInt = Int64(carYear.text!)
+        trip.setValue(carYearInt, forKey: "carYear")
+        trip.setValue(license.text!, forKey: "license")
+        trip.setValue(nameLabel.text!, forKey: "nameLabel")
+        
+        let db = CKContainer.default().publicCloudDatabase
+        db.save(trip) { (record, error) in
+            if record != nil{
+                print("Record Save")
+            }
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         firstName.delegate = self
@@ -64,8 +158,8 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
         carYear.delegate = self
         license.delegate = self
         
-        
-        
+        createDatePicker()
+        createTimePicker()
         // Do any additional setup after loading the view.
     }
 
