@@ -20,6 +20,7 @@
 		5D1CE51D1FB4DCF5005DE0FF /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */; };
 		5D1CE5621FDDF1E2005DE0FF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1CE5611FDDF1E2005DE0FF /* CloudKit.framework */; };
 		5DB0B2011FDDF9D10032B2B9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB0B2001FDDF9D10032B2B9 /* SearchViewController.swift */; };
+		5DB0B2031FDDFBA10032B2B9 /* DriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB0B2021FDDFBA10032B2B9 /* DriveViewController.swift */; };
 		BF4FD3751FD735E200515C59 /* DashBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FD3741FD735E200515C59 /* DashBoardTableViewCell.swift */; };
 		BFA365371FD7D61F00466517 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA365361FD7D61F00466517 /* Default-568h@2x.png */; };
 		BFA365391FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA365381FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift */; };
@@ -64,6 +65,7 @@
 		5D1CE55F1FDDF1C3005DE0FF /* RideShareFinalProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RideShareFinalProject.entitlements; sourceTree = "<group>"; };
 		5D1CE5611FDDF1E2005DE0FF /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		5DB0B2001FDDF9D10032B2B9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		5DB0B2021FDDFBA10032B2B9 /* DriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveViewController.swift; sourceTree = "<group>"; };
 		BF4FD3741FD735E200515C59 /* DashBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardTableViewCell.swift; sourceTree = "<group>"; };
 		BFA365361FD7D61F00466517 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BFA365381FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardNotificationTableViewCell.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				5D1CE51A1FB4DA40005DE0FF /* User.swift */,
 				5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */,
 				5D1CE4ED1FB4D894005DE0FF /* Main.storyboard */,
+				5DB0B2021FDDFBA10032B2B9 /* DriveViewController.swift */,
 				5DB0B2001FDDF9D10032B2B9 /* SearchViewController.swift */,
 				2E30ADF61FD9D29A0080CAD0 /* DriveTableViewCell.swift */,
 				5D1CE4E91FB4D894005DE0FF /* AppDelegate.swift */,
@@ -319,6 +322,7 @@
 				5D1CE4EA1FB4D894005DE0FF /* AppDelegate.swift in Sources */,
 				2E30ADF71FD9D29A0080CAD0 /* DriveTableViewCell.swift in Sources */,
 				BFFDBBC51FD86C2000921CC2 /* DashBoardViewController.swift in Sources */,
+				5DB0B2031FDDFBA10032B2B9 /* DriveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
