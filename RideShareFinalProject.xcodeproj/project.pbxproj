@@ -71,7 +71,7 @@
 		5D1CE55F1FDDF1C3005DE0FF /* RideShareFinalProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RideShareFinalProject.entitlements; sourceTree = "<group>"; };
 		5D8239801FE0BE5A00BCEF8A /* RideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideViewController.swift; sourceTree = "<group>"; };
 		5D8239821FE1067200BCEF8A /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
-		5D8E0AE91FE13DDD00A50650 /* TripDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TripDelegate.swift; path = ../TripDelegate.swift; sourceTree = "<group>"; };
+		5D8E0AE91FE13DDD00A50650 /* TripDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDelegate.swift; sourceTree = "<group>"; };
 		5D8E0AED1FE1494200A50650 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		5DB0B2001FDDF9D10032B2B9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5DB0B2021FDDFBA10032B2B9 /* DriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveViewController.swift; sourceTree = "<group>"; };
