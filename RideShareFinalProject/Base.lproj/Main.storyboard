@@ -354,21 +354,18 @@
         <!--Profile-->
         <scene sceneID="It0-st-zoY">
             <objects>
-                <viewController id="ZlN-Qr-PzX" sceneMemberID="viewController">
+                <viewController id="ZlN-Qr-PzX" customClass="ProfileViewController" customModule="RideShareFinalProject" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yDR-jO-RSc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ite-lH-eaF">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_Selected" highlightedImage="Profile_Selected" translatesAutoresizingMaskIntoConstraints="NO" id="ite-lH-eaF">
                                 <rect key="frame" x="27" y="29" width="140" height="140"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ONV-U0-Ig4">
-                                <rect key="frame" x="182" y="47" width="172" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="172" id="BMn-57-dNy"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ONV-U0-Ig4">
+                                <rect key="frame" x="182" y="47" width="80" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4eN-MP-458">
@@ -377,7 +374,7 @@
                                     <constraint firstAttribute="width" constant="172" id="v44-9H-8nZ"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxG-C4-t6o">
@@ -417,23 +414,26 @@
                                     <segment title="Female"/>
                                     <segment title="Other"/>
                                 </segments>
+                                <connections>
+                                    <action selector="profileGender:" destination="ZlN-Qr-PzX" eventType="valueChanged" id="6t4-fj-Jel"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mizzou" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rvG-fv-ead">
                                 <rect key="frame" x="120" y="254" width="210" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Biology" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xT1-Mo-ntm">
                                 <rect key="frame" x="120" y="289" width="210" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Junior" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wcw-IA-B27">
                                 <rect key="frame" x="120" y="324" width="210" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7UG-mr-wFa">
@@ -443,16 +443,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J4J-OK-BPu">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mm/dd/yyyy" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J4J-OK-BPu">
                                 <rect key="frame" x="120" y="183" width="210" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lor-yu-fe1">
                                 <rect key="frame" x="313" y="9" width="41" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="ZlN-Qr-PzX" eventType="touchUpInside" id="jNn-rU-lm4"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UhZ-IZ-3Za">
+                                <rect key="frame" x="274" y="47" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="k7E-lk-f0S"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -462,20 +474,21 @@
                             <constraint firstItem="J4J-OK-BPu" firstAttribute="top" secondItem="4eN-MP-458" secondAttribute="bottom" constant="50" id="8p2-Z5-uNi"/>
                             <constraint firstItem="mkF-MD-HVq" firstAttribute="leading" secondItem="f2U-6H-sF7" secondAttribute="leading" constant="15" id="9P0-Ov-0Ia"/>
                             <constraint firstItem="f2U-6H-sF7" firstAttribute="trailing" secondItem="wcw-IA-B27" secondAttribute="trailing" constant="45" id="Af6-TN-0id"/>
+                            <constraint firstItem="f2U-6H-sF7" firstAttribute="trailing" secondItem="UhZ-IZ-3Za" secondAttribute="trailing" constant="21" id="CJH-MG-RK0"/>
                             <constraint firstItem="GRe-J2-6Bp" firstAttribute="leading" secondItem="f2U-6H-sF7" secondAttribute="leading" constant="15" id="CKo-0S-Dhl"/>
                             <constraint firstItem="xT1-Mo-ntm" firstAttribute="leading" secondItem="Ufy-zi-JaK" secondAttribute="trailing" constant="57" id="CYZ-ZO-IUo"/>
                             <constraint firstItem="wcw-IA-B27" firstAttribute="top" secondItem="xT1-Mo-ntm" secondAttribute="bottom" constant="5" id="Fqo-gI-maP"/>
                             <constraint firstItem="7UG-mr-wFa" firstAttribute="leading" secondItem="f2U-6H-sF7" secondAttribute="leading" constant="16" id="G66-Pk-dXX"/>
-                            <constraint firstItem="ONV-U0-Ig4" firstAttribute="top" secondItem="Lor-yu-fe1" secondAttribute="bottom" constant="8" id="HQB-fY-21A"/>
                             <constraint firstItem="wAq-aR-Gkq" firstAttribute="top" secondItem="J4J-OK-BPu" secondAttribute="bottom" constant="8" id="I15-gg-FLO"/>
                             <constraint firstItem="mkF-MD-HVq" firstAttribute="top" secondItem="CxG-C4-t6o" secondAttribute="bottom" constant="14" id="IIi-Zc-Xpk"/>
+                            <constraint firstItem="UhZ-IZ-3Za" firstAttribute="top" secondItem="Lor-yu-fe1" secondAttribute="bottom" constant="8" id="IZT-jd-lCi"/>
                             <constraint firstItem="f2U-6H-sF7" firstAttribute="bottom" secondItem="7UG-mr-wFa" secondAttribute="bottom" constant="12" id="K6V-YN-qcp"/>
-                            <constraint firstItem="f2U-6H-sF7" firstAttribute="trailing" secondItem="ONV-U0-Ig4" secondAttribute="trailing" constant="21" id="P08-TY-DPf"/>
                             <constraint firstItem="f2U-6H-sF7" firstAttribute="trailing" secondItem="4eN-MP-458" secondAttribute="trailing" constant="21" id="P9y-80-o0b"/>
                             <constraint firstItem="ONV-U0-Ig4" firstAttribute="leading" secondItem="ite-lH-eaF" secondAttribute="trailing" constant="15" id="Pq1-Qn-1Ut"/>
                             <constraint firstItem="CxG-C4-t6o" firstAttribute="top" secondItem="f2U-6H-sF7" secondAttribute="top" constant="169" id="QQg-8f-5BF"/>
                             <constraint firstItem="f2U-6H-sF7" firstAttribute="trailing" secondItem="rvG-fv-ead" secondAttribute="trailing" constant="45" id="Qya-Hg-NJM"/>
                             <constraint firstItem="wAq-aR-Gkq" firstAttribute="leading" secondItem="mkF-MD-HVq" secondAttribute="trailing" constant="43" id="RNV-en-vpt"/>
+                            <constraint firstItem="UhZ-IZ-3Za" firstAttribute="leading" secondItem="ONV-U0-Ig4" secondAttribute="trailing" constant="12" id="SLa-4V-lao"/>
                             <constraint firstItem="rvG-fv-ead" firstAttribute="top" secondItem="wAq-aR-Gkq" secondAttribute="bottom" constant="5" id="UfK-2H-Lh3"/>
                             <constraint firstItem="J4J-OK-BPu" firstAttribute="top" secondItem="ite-lH-eaF" secondAttribute="bottom" constant="14" id="VAv-sK-HtD"/>
                             <constraint firstItem="GRe-J2-6Bp" firstAttribute="top" secondItem="mkF-MD-HVq" secondAttribute="bottom" constant="14" id="VbD-JN-oIv"/>
@@ -487,6 +500,7 @@
                             <constraint firstItem="4EH-FU-ext" firstAttribute="top" secondItem="Ufy-zi-JaK" secondAttribute="bottom" constant="14" id="b6r-2A-mex"/>
                             <constraint firstItem="7UG-mr-wFa" firstAttribute="top" secondItem="wcw-IA-B27" secondAttribute="bottom" constant="14" id="bZA-UD-iF8"/>
                             <constraint firstItem="J4J-OK-BPu" firstAttribute="leading" secondItem="CxG-C4-t6o" secondAttribute="trailing" constant="36" id="bvL-Wc-Hja"/>
+                            <constraint firstItem="4eN-MP-458" firstAttribute="top" secondItem="UhZ-IZ-3Za" secondAttribute="bottom" constant="26" id="c4V-mI-lxz"/>
                             <constraint firstItem="xT1-Mo-ntm" firstAttribute="top" secondItem="rvG-fv-ead" secondAttribute="bottom" constant="5" id="eM0-l3-mK8"/>
                             <constraint firstItem="f2U-6H-sF7" firstAttribute="trailing" secondItem="J4J-OK-BPu" secondAttribute="trailing" constant="45" id="gCU-KI-1nU"/>
                             <constraint firstItem="Ufy-zi-JaK" firstAttribute="leading" secondItem="f2U-6H-sF7" secondAttribute="leading" constant="15" id="kCm-jb-I8q"/>
@@ -504,6 +518,16 @@
                         <viewLayoutGuide key="safeArea" id="f2U-6H-sF7"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="gFz-6v-AJW"/>
+                    <connections>
+                        <outlet property="profileBirthday" destination="J4J-OK-BPu" id="4f4-yQ-bom"/>
+                        <outlet property="profileClass" destination="wcw-IA-B27" id="z7W-Hj-i3i"/>
+                        <outlet property="profileEmail" destination="4eN-MP-458" id="bDz-Tb-x2C"/>
+                        <outlet property="profileFirstName" destination="ONV-U0-Ig4" id="bR1-89-zy9"/>
+                        <outlet property="profileImage" destination="ite-lH-eaF" id="YJY-RX-11i"/>
+                        <outlet property="profileLastName" destination="UhZ-IZ-3Za" id="u4D-CE-IUb"/>
+                        <outlet property="profileMajor" destination="xT1-Mo-ntm" id="EaY-PA-GPP"/>
+                        <outlet property="profileSchool" destination="rvG-fv-ead" id="I0v-S0-zrV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jT0-M2-Kwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1183,6 +1207,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Profile_Selected" width="32" height="32"/>
         <image name="arrow.png" width="960" height="480"/>
         <image name="exampleImage1.png" width="1000" height="640"/>
     </resources>
