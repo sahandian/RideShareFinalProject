@@ -136,7 +136,6 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
                     guard let records = records else{ return }
                     self.trip = records
                     DispatchQueue.main.async{
-                        print(self.trip.count)
                         self.tableView.reloadData()
                     }
                 }
