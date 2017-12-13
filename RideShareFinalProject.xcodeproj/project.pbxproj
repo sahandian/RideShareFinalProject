@@ -21,6 +21,7 @@
 		5D8239811FE0BE5A00BCEF8A /* RideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8239801FE0BE5A00BCEF8A /* RideViewController.swift */; };
 		5D8239831FE1067200BCEF8A /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8239821FE1067200BCEF8A /* TripViewController.swift */; };
 		5D8E0AEA1FE13DDD00A50650 /* TripDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8E0AE91FE13DDD00A50650 /* TripDelegate.swift */; };
+		5D8E0AEE1FE1494200A50650 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8E0AED1FE1494200A50650 /* ResultsViewController.swift */; };
 		5DB0B2011FDDF9D10032B2B9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB0B2001FDDF9D10032B2B9 /* SearchViewController.swift */; };
 		5DB0B2031FDDFBA10032B2B9 /* DriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB0B2021FDDFBA10032B2B9 /* DriveViewController.swift */; };
 		5F5F060E1FE0AC6400EAC738 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5F060D1FE0AC6400EAC738 /* ProfileViewController.swift */; };
@@ -71,6 +72,7 @@
 		5D8239801FE0BE5A00BCEF8A /* RideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideViewController.swift; sourceTree = "<group>"; };
 		5D8239821FE1067200BCEF8A /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
 		5D8E0AE91FE13DDD00A50650 /* TripDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TripDelegate.swift; path = ../TripDelegate.swift; sourceTree = "<group>"; };
+		5D8E0AED1FE1494200A50650 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		5DB0B2001FDDF9D10032B2B9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5DB0B2021FDDFBA10032B2B9 /* DriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveViewController.swift; sourceTree = "<group>"; };
 		5F5F060D1FE0AC6400EAC738 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				5D1CE51A1FB4DA40005DE0FF /* User.swift */,
 				5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */,
 				5D1CE4ED1FB4D894005DE0FF /* Main.storyboard */,
+				5D8E0AED1FE1494200A50650 /* ResultsViewController.swift */,
 				5D8239821FE1067200BCEF8A /* TripViewController.swift */,
 				5DB0B2021FDDFBA10032B2B9 /* DriveViewController.swift */,
 				5D8239801FE0BE5A00BCEF8A /* RideViewController.swift */,
@@ -334,6 +337,7 @@
 				5D1CE51B1FB4DA40005DE0FF /* User.swift in Sources */,
 				BF4FD3751FD735E200515C59 /* DashBoardTableViewCell.swift in Sources */,
 				5D1CE4F21FB4D894005DE0FF /* RideShareFinalProject.xcdatamodeld in Sources */,
+				5D8E0AEE1FE1494200A50650 /* ResultsViewController.swift in Sources */,
 				5D8E0AEA1FE13DDD00A50650 /* TripDelegate.swift in Sources */,
 				5D1CE4EC1FB4D894005DE0FF /* ViewController.swift in Sources */,
 				5F5F060E1FE0AC6400EAC738 /* ProfileViewController.swift in Sources */,
