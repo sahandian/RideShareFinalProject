@@ -148,7 +148,7 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
         trip.setValue(carYearInt, forKey: "carYear")
         trip.setValue(license.text!, forKey: "license")
         
-        let publicDatabase = CKContainer.default().publicCloudDatabase
+        let publicDatabase = CKContainer(identifier: "iCloud.edu.mail.missouri.RideShareFinalProject").publicCloudDatabase
         publicDatabase.save(trip) {(record, error) in
             if error == nil{
                 print("Record Saved")
