@@ -10,13 +10,30 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
-  
+    @IBAction func search(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "search", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destVC = segue.destination as! ResultsViewController
+        
+        destVC.city1 = city1.text!
+        destVC.city2 = city2.text!
+        
+        
+    }
+    
+    
     
     @IBOutlet weak var dateField: UITextField!
     
     let picker = UIDatePicker()
     
-
+    @IBOutlet weak var city1: UITextField!
+    @IBOutlet weak var city2: UITextField!
+    
     
     func createDatePicker(){
         let toolbar = UIToolbar()
