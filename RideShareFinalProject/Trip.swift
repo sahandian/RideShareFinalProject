@@ -22,13 +22,14 @@ struct driverTrip{
     
     var locationFrom: Location
     var destination: Location
-    var startDate: Date
-    var returnDate: Date
     var DepartureTime: Date
-    var returnTime: Date
-    var seatsAvailable: Int
-    var price: Int
-    var comments: String
-    //var comments: String
+    var seatsAvailable: Int64
+    
+//    var startDate: Date
+//    var returnDate: Date
+//    var returnTime: Date
+//    var price: Int
+//    var comments: String
+//    //var comments: String
     
 }
