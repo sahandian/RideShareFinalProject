@@ -31,13 +31,13 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0{
-            if trip.count < 4{
+            if trip.count < 4 && trip.count >= 0{
                 return trip.count
             }else{
-                return 3
+                return 4
             }
         }
-        return 4
+        return 10
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var deque: UITableViewCell

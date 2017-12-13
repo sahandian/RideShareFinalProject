@@ -27,15 +27,18 @@ class TripInformationViewController: UIViewController {
     
     private func updateUI(){
         if email != nil{
+            let firstName = (tripModel?["firstName"] as! String)
+            let full = firstName + (tripModel?["lasName"] as! String)
+            fullName.text = full
             email.text = (tripModel?["email"] as! String)
-            start.text = (tripModel?["startLocation"] as! String)
-            destination.text = (tripModel?["destinationLocation"] as! String)
-            let departureTime = (tripModel?["departureTime"] as! Date)
+            start.text = (tripModel?["address"] as! String)
+            destination.text = (tripModel?["address2"] as! String)
+            let departureTime = (tripModel?["departure"] as! Date)
             let formatter = DateFormatter()
             formatter.dateStyle = .short
             formatter.dateStyle = .short
             departure.text = formatter.string(from: departureTime)
-            carModel.text = (tripModel?["car"] as! String)
+            carModel.text = (tripModel?["carModel"] as! String)
         }
     }
     

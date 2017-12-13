@@ -24,14 +24,17 @@ class DashBoardTableViewCell: UITableViewCell {
         }
     }
     private func updateUI(){
-        start.text = (infoToBeShown?["startLocation"] as! String)
-        desination.text = (infoToBeShown?["destinationLocation"] as! String)
-        let myTime = (infoToBeShown?["departureTime"] as! Date)
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        formatter.dateStyle = .short
-        date.text = formatter.string(from: myTime)
-        departureTime.text = formatter.string(from: myTime)
+            start.text = (infoToBeShown?["state"] as! String)
+            desination.text = (infoToBeShown?["state2"] as! String)
+            let depart = (infoToBeShown?["departure"] as! Date)
+            let time = (infoToBeShown?["time"] as! Date)
+            let formatter = DateFormatter()
+            formatter.dateStyle = .short
+            formatter.timeStyle = .none
+            date.text = formatter.string(from: depart)
+            formatter.timeStyle = .none
+            formatter.timeStyle = .short
+            departureTime.text = formatter.string(from: time)
     }
         override func awakeFromNib() {
         super.awakeFromNib()

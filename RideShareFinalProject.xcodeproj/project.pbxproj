@@ -18,12 +18,16 @@
 		5D1CE50D1FB4D895005DE0FF /* RideShareFinalProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE50C1FB4D895005DE0FF /* RideShareFinalProjectUITests.swift */; };
 		5D1CE51B1FB4DA40005DE0FF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE51A1FB4DA40005DE0FF /* User.swift */; };
 		5D1CE51D1FB4DCF5005DE0FF /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */; };
-		5D1CE5621FDDF1E2005DE0FF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1CE5611FDDF1E2005DE0FF /* CloudKit.framework */; };
+		5D8239811FE0BE5A00BCEF8A /* RideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8239801FE0BE5A00BCEF8A /* RideViewController.swift */; };
+		5D8239831FE1067200BCEF8A /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8239821FE1067200BCEF8A /* TripViewController.swift */; };
+		5D8E0AEA1FE13DDD00A50650 /* TripDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8E0AE91FE13DDD00A50650 /* TripDelegate.swift */; };
+		5D8E0AEE1FE1494200A50650 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8E0AED1FE1494200A50650 /* ResultsViewController.swift */; };
 		5DB0B2011FDDF9D10032B2B9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB0B2001FDDF9D10032B2B9 /* SearchViewController.swift */; };
 		5DB0B2031FDDFBA10032B2B9 /* DriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB0B2021FDDFBA10032B2B9 /* DriveViewController.swift */; };
 		5F5F060E1FE0AC6400EAC738 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5F060D1FE0AC6400EAC738 /* ProfileViewController.swift */; };
 		BF4FD3751FD735E200515C59 /* DashBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FD3741FD735E200515C59 /* DashBoardTableViewCell.swift */; };
 		BF5C44EB1FDA8D6400FE8E4F /* TripInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5C44EA1FDA8D6400FE8E4F /* TripInformationViewController.swift */; };
+		BF762FE11FE0C1FA00024393 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF762FE01FE0C1FA00024393 /* CloudKit.framework */; };
 		BFA365371FD7D61F00466517 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA365361FD7D61F00466517 /* Default-568h@2x.png */; };
 		BFA365391FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA365381FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift */; };
 		BFFDBBC51FD86C2000921CC2 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFDBBC41FD86C2000921CC2 /* DashBoardViewController.swift */; };
@@ -65,12 +69,16 @@
 		5D1CE51A1FB4DA40005DE0FF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		5D1CE55F1FDDF1C3005DE0FF /* RideShareFinalProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RideShareFinalProject.entitlements; sourceTree = "<group>"; };
-		5D1CE5611FDDF1E2005DE0FF /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		5D8239801FE0BE5A00BCEF8A /* RideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideViewController.swift; sourceTree = "<group>"; };
+		5D8239821FE1067200BCEF8A /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
+		5D8E0AE91FE13DDD00A50650 /* TripDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDelegate.swift; sourceTree = "<group>"; };
+		5D8E0AED1FE1494200A50650 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		5DB0B2001FDDF9D10032B2B9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5DB0B2021FDDFBA10032B2B9 /* DriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveViewController.swift; sourceTree = "<group>"; };
 		5F5F060D1FE0AC6400EAC738 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BF4FD3741FD735E200515C59 /* DashBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardTableViewCell.swift; sourceTree = "<group>"; };
 		BF5C44EA1FDA8D6400FE8E4F /* TripInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInformationViewController.swift; sourceTree = "<group>"; };
+		BF762FE01FE0C1FA00024393 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		BFA365361FD7D61F00466517 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BFA365381FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardNotificationTableViewCell.swift; sourceTree = "<group>"; };
 		BFFDBBC41FD86C2000921CC2 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D1CE5621FDDF1E2005DE0FF /* CloudKit.framework in Frameworks */,
+				BF762FE11FE0C1FA00024393 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +118,7 @@
 				5D1CE5001FB4D894005DE0FF /* RideShareFinalProjectTests */,
 				5D1CE50B1FB4D895005DE0FF /* RideShareFinalProjectUITests */,
 				5D1CE4E71FB4D894005DE0FF /* Products */,
-				5D1CE5601FDDF1E2005DE0FF /* Frameworks */,
+				BF90095B1FDCA85E00C2E8A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +135,7 @@
 		5D1CE4E81FB4D894005DE0FF /* RideShareFinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				5D8E0AE91FE13DDD00A50650 /* TripDelegate.swift */,
 				5D1CE55F1FDDF1C3005DE0FF /* RideShareFinalProject.entitlements */,
 				5F5F060D1FE0AC6400EAC738 /* ProfileViewController.swift */,
 				5D1CE4EB1FB4D894005DE0FF /* ViewController.swift */,
@@ -137,7 +146,10 @@
 				5D1CE51A1FB4DA40005DE0FF /* User.swift */,
 				5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */,
 				5D1CE4ED1FB4D894005DE0FF /* Main.storyboard */,
+				5D8E0AED1FE1494200A50650 /* ResultsViewController.swift */,
+				5D8239821FE1067200BCEF8A /* TripViewController.swift */,
 				5DB0B2021FDDFBA10032B2B9 /* DriveViewController.swift */,
+				5D8239801FE0BE5A00BCEF8A /* RideViewController.swift */,
 				5DB0B2001FDDF9D10032B2B9 /* SearchViewController.swift */,
 				2E30ADF61FD9D29A0080CAD0 /* DriveTableViewCell.swift */,
 				5D1CE4E91FB4D894005DE0FF /* AppDelegate.swift */,
@@ -167,10 +179,10 @@
 			path = RideShareFinalProjectUITests;
 			sourceTree = "<group>";
 		};
-		5D1CE5601FDDF1E2005DE0FF /* Frameworks */ = {
+		BF90095B1FDCA85E00C2E8A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5D1CE5611FDDF1E2005DE0FF /* CloudKit.framework */,
+				BF762FE01FE0C1FA00024393 /* CloudKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -318,15 +330,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5C44EB1FDA8D6400FE8E4F /* TripInformationViewController.swift in Sources */,
 				5DB0B2011FDDF9D10032B2B9 /* SearchViewController.swift in Sources */,
 				BF5C44EB1FDA8D6400FE8E4F /* TripInformationViewController.swift in Sources */,
 				5D1CE51D1FB4DCF5005DE0FF /* Trip.swift in Sources */,
+				5D8239811FE0BE5A00BCEF8A /* RideViewController.swift in Sources */,
 				5D1CE51B1FB4DA40005DE0FF /* User.swift in Sources */,
 				BF4FD3751FD735E200515C59 /* DashBoardTableViewCell.swift in Sources */,
 				5D1CE4F21FB4D894005DE0FF /* RideShareFinalProject.xcdatamodeld in Sources */,
+				5D8E0AEE1FE1494200A50650 /* ResultsViewController.swift in Sources */,
+				5D8E0AEA1FE13DDD00A50650 /* TripDelegate.swift in Sources */,
 				5D1CE4EC1FB4D894005DE0FF /* ViewController.swift in Sources */,
 				5F5F060E1FE0AC6400EAC738 /* ProfileViewController.swift in Sources */,
 				BFA365391FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift in Sources */,
+				5D8239831FE1067200BCEF8A /* TripViewController.swift in Sources */,
 				5D1CE4EA1FB4D894005DE0FF /* AppDelegate.swift in Sources */,
 				2E30ADF71FD9D29A0080CAD0 /* DriveTableViewCell.swift in Sources */,
 				BFFDBBC51FD86C2000921CC2 /* DashBoardViewController.swift in Sources */,
