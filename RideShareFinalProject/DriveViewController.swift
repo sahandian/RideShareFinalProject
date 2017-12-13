@@ -97,7 +97,6 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func cancelButton(_ sender: UIButton) {
-        print("Drive Records Cleared!")
         firstName.text = nil
         lastName.text = nil
         email.text = nil
@@ -116,6 +115,8 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
         carModel.text = nil
         carYear.text = nil
         license.text = nil
+        
+        print("Drive Records Cleared!")
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
@@ -146,7 +147,6 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
         let carYearInt = Int64(carYear.text!)
         trip.setValue(carYearInt, forKey: "carYear")
         trip.setValue(license.text!, forKey: "license")
-        trip.setValue(nameLabel.text!, forKey: "nameLabel")
         
         let publicDatabase = CKContainer.default().publicCloudDatabase
         publicDatabase.save(trip) {(record, error) in
@@ -155,6 +155,24 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
                 print(record!["firstName"] as! String)
             }
         }
+        firstName.text = nil
+        lastName.text = nil
+        email.text = nil
+        departure.text = nil
+        time.text = nil
+        address.text = nil
+        city.text = nil
+        state.text = nil
+        zip.text = nil
+        address2.text = nil
+        city2.text = nil
+        state2.text = nil
+        zip2.text = nil
+        seatsAvailable.text = nil
+        carMake.text = nil
+        carModel.text = nil
+        carYear.text = nil
+        license.text = nil
     }
 
     override func viewDidLoad() {
