@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class DashBoardTableViewCell: UITableViewCell {
 
@@ -17,19 +18,25 @@ class DashBoardTableViewCell: UITableViewCell {
     @IBOutlet weak var desination: UILabel!
     
     // public API
-    var infoToBeShown: String = ""{
+    var infoToBeShown: CKRecord?{
         didSet{
             updateUI()
         }
     }
     private func updateUI(){
-        start.text = "New York City"
-        desination.text = "Los Angeles"
-        date.text = "11/12"
-        departureTime.text = "10 a.m."
+            start.text = (infoToBeShown?["state"] as! String)
+            desination.text = (infoToBeShown?["state2"] as! String)
+            let depart = (infoToBeShown?["departure"] as! Date)
+            let time = (infoToBeShown?["time"] as! Date)
+            let formatter = DateFormatter()
+            formatter.dateStyle = .short
+            formatter.timeStyle = .none
+            date.text = formatter.string(from: depart)
+            formatter.timeStyle = .none
+            formatter.timeStyle = .short
+            departureTime.text = formatter.string(from: time)
     }
-    
-    override func awakeFromNib() {
+        override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
