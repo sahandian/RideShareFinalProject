@@ -35,7 +35,19 @@
                     <view key="view" contentMode="scaleToFill" id="FZP-hA-tx0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o8X-lW-0DN">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o8X-lW-0DN" firstAttribute="leading" secondItem="Kuf-25-yZZ" secondAttribute="leading" id="1YO-xl-5d6"/>
+                            <constraint firstItem="o8X-lW-0DN" firstAttribute="top" secondItem="Kuf-25-yZZ" secondAttribute="top" id="JTH-kN-ISQ"/>
+                            <constraint firstItem="Kuf-25-yZZ" firstAttribute="trailing" secondItem="o8X-lW-0DN" secondAttribute="trailing" id="V5N-Zt-3Nh"/>
+                            <constraint firstItem="Kuf-25-yZZ" firstAttribute="bottom" secondItem="o8X-lW-0DN" secondAttribute="bottom" id="xCg-r6-cXq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Kuf-25-yZZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Ride" id="xHS-sB-eQx">
@@ -51,6 +63,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tripsTableView" destination="o8X-lW-0DN" id="pm7-2d-C6I"/>
                         <segue destination="pXe-2s-G3Y" kind="show" id="kiR-m2-kLb"/>
                     </connections>
                 </viewController>

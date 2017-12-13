@@ -11,6 +11,7 @@ import CloudKit
 
 class RideViewController: UIViewController {
 
+    @IBOutlet weak var tripsTableView: UITableView!
     let publicDatabase = CKContainer.default().publicCloudDatabase
     
     var trips = [CKRecord]()
