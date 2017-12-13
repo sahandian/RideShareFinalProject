@@ -66,10 +66,13 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
         
+        profileBirthday.resignFirstResponder()
+        
         let dateString = formatter.string(from: datePicker.date)
         
         profileBirthday.text = "\(dateString)"
         self.viewDidLoad()
+        
     }
     
     
