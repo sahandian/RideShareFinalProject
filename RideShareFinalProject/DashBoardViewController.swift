@@ -34,10 +34,10 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
             if trip.count < 4 && trip.count >= 0{
                 return trip.count
             }else{
-                return 3
+                return 4
             }
         }
-        return 4
+        return 10
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var deque: UITableViewCell
