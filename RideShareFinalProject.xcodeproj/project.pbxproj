@@ -332,6 +332,7 @@
 			files = (
 				BF5C44EB1FDA8D6400FE8E4F /* TripInformationViewController.swift in Sources */,
 				5DB0B2011FDDF9D10032B2B9 /* SearchViewController.swift in Sources */,
+				BF5C44EB1FDA8D6400FE8E4F /* TripInformationViewController.swift in Sources */,
 				5D1CE51D1FB4DCF5005DE0FF /* Trip.swift in Sources */,
 				5D8239811FE0BE5A00BCEF8A /* RideViewController.swift in Sources */,
 				5D1CE51B1FB4DA40005DE0FF /* User.swift in Sources */,
@@ -517,7 +518,7 @@
 				DEVELOPMENT_TEAM = 4FNJNUQ3AD;
 				INFOPLIST_FILE = RideShareFinalProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.mail.missouri.RideShareFinalProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RideshareTeam.RideShareFinalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -533,7 +534,7 @@
 				DEVELOPMENT_TEAM = 4FNJNUQ3AD;
 				INFOPLIST_FILE = RideShareFinalProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.mail.missouri.RideShareFinalProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RideshareTeam.RideShareFinalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

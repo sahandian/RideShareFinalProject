@@ -35,7 +35,6 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var license: UITextField!
     @IBOutlet weak var nameLabel: UITextField!
     
-    
     //for date picker for depature
     let datePicker = UIDatePicker()
     
@@ -57,6 +56,8 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
         
+        departure.resignFirstResponder()
+        
         let dateString = formatter.string(from: datePicker.date)
         
         departure.text = "\(dateString)"
@@ -64,7 +65,7 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    //for date picker for depature
+    //for date picker for time
     let timePicker = UIDatePicker()
     
     func createTimePicker(){
@@ -75,15 +76,17 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
         
         toolbar2.setItems([done], animated: false)
         time.inputAccessoryView = toolbar2
-        time.inputView = timePicker
         
-        timePicker.datePickerMode = .date
+        time.inputView = timePicker
+        timePicker.datePickerMode = .time
     }
     
     @objc func timePressed(){
         let formatter = DateFormatter()
         formatter.dateStyle = .none
         formatter.timeStyle = .medium
+        
+        time.resignFirstResponder()
         
     
         let timeString = formatter.string(from: timePicker.date)
@@ -93,9 +96,31 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
         self.viewDidLoad()
     }
     
+    @IBAction func cancelButton(_ sender: UIButton) {
+        firstName.text = nil
+        lastName.text = nil
+        email.text = nil
+        departure.text = nil
+        time.text = nil
+        address.text = nil
+        city.text = nil
+        state.text = nil
+        zip.text = nil
+        address2.text = nil
+        city2.text = nil
+        state2.text = nil
+        zip2.text = nil
+        seatsAvailable.text = nil
+        carMake.text = nil
+        carModel.text = nil
+        carYear.text = nil
+        license.text = nil
+        
+        print("Drive Records Cleared!")
+    }
     
     @IBAction func saveButton(_ sender: UIButton) {
-        print("Save button clikced")
+        print("Records Saved!")
         let trip = CKRecord(recordType: "Trip")
         trip.setValue(firstName.text!, forKey: "firstName")
         trip.setValue(lastName.text!, forKey: "lasName")
@@ -122,15 +147,32 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
         let carYearInt = Int64(carYear.text!)
         trip.setValue(carYearInt, forKey: "carYear")
         trip.setValue(license.text!, forKey: "license")
-        trip.setValue(nameLabel.text!, forKey: "nameLabel")
         
-        let publicDatabase = CKContainer.default().publicCloudDatabase
+        let publicDatabase = CKContainer(identifier: "iCloud.edu.mail.missouri.RideShareFinalProject").publicCloudDatabase
         publicDatabase.save(trip) {(record, error) in
             if error == nil{
                 print("Record Saved")
                 print(record!["firstName"] as! String)
             }
         }
+        firstName.text = nil
+        lastName.text = nil
+        email.text = nil
+        departure.text = nil
+        time.text = nil
+        address.text = nil
+        city.text = nil
+        state.text = nil
+        zip.text = nil
+        address2.text = nil
+        city2.text = nil
+        state2.text = nil
+        zip2.text = nil
+        seatsAvailable.text = nil
+        carMake.text = nil
+        carModel.text = nil
+        carYear.text = nil
+        license.text = nil
     }
 
     override func viewDidLoad() {
