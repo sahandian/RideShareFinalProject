@@ -7,9 +7,28 @@
 //
 
 import UIKit
+import CloudKit
 
 class RideViewController: UIViewController {
 
+    let publicDatabase = CKContainer.default().publicCloudDatabase
+    
+    var trips = [CKRecord]()
+    
+    func queryTrips(){
+        
+        let query = CKQuery(recordType: "Trip", predicate: NSPredicate(value: true))
+        
+        publicDatabase.perform(query, inZoneWith: nil) { (trips, error) in DispatchQueue.main.async {
+            if let error = error {
+                print(error)
+            } else {
+                self.trips = trips ?? []
+            }
+            }}
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

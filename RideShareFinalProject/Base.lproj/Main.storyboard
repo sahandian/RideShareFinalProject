@@ -31,7 +31,7 @@
         <!--Ride-->
         <scene sceneID="ado-9C-JRa">
             <objects>
-                <viewController id="kLK-c4-NRi" sceneMemberID="viewController">
+                <viewController id="kLK-c4-NRi" customClass="RideViewController" customModule="RideShareFinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FZP-hA-tx0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
