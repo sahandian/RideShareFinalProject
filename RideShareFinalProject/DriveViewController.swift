@@ -124,10 +124,11 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
         trip.setValue(license.text!, forKey: "license")
         trip.setValue(nameLabel.text!, forKey: "nameLabel")
         
-        let db = CKContainer.default().publicCloudDatabase
-        db.save(trip) { (record, error) in
-            if record != nil{
-                print("Record Save")
+        let publicDatabase = CKContainer.default().publicCloudDatabase
+        publicDatabase.save(trip) {(record, error) in
+            if error == nil{
+                print("Record Saved")
+                print(record!["firstName"] as! String)
             }
         }
     }
