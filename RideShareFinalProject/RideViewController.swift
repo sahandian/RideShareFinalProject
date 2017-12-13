@@ -18,6 +18,7 @@ class RideViewController: UIViewController {
     
     var trips = [CKRecord]()
     
+    
     func queryTrips(){
         
         let query = CKQuery(recordType: "Trip", predicate: NSPredicate(value: true))
@@ -37,6 +38,20 @@ class RideViewController: UIViewController {
             }
             
         }
+
+    }
+        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        
+        guard let destination = segue.destination as? TripViewController else{
+            return
+        }
+        destination.tripDelegate = self
+        
+        if let selectedRow = tripsTableView.indexPathForSelectedRow?.row{
+            destination.trip = trips[selectedRow]
+        }
+        
     }
     
     
@@ -62,16 +77,16 @@ class RideViewController: UIViewController {
         performSegue(withIdentifier: "showExpense", sender: self)
     }
  */
-    
-    override func viewWillAppear(_ animated: Bool) {
-        queryTrips()
-    }
+//
+//    override func viewWillAppear(_ animated: Bool) {
+//        queryTrips()
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
        
-        
+        queryTrips()
         // Do any additional setup after loading the view.
     }
 
@@ -115,3 +130,10 @@ extension RideViewController: UITableViewDelegate {
     }
 }
 
+extension RideViewController: TripDelegate {
+    func add(trips: [CKRecord]) {
+        self.trips.append(contentsOf: trips)
+        
+        self.tripsTableView?.reloadData()
+    }
+}

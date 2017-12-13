@@ -7,12 +7,51 @@
 //
 
 import UIKit
+import CloudKit
 
 class TripViewController: UIViewController {
 
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var address: UITextField!
+    @IBOutlet weak var city: UITextField!
+    @IBOutlet weak var state: UITextField!
+    @IBOutlet weak var zip: UITextField!
+    @IBOutlet weak var address2: UITextField!
+    @IBOutlet weak var city2: UITextField!
+    @IBOutlet weak var state2: UITextField!
+    @IBOutlet weak var zip2: UITextField!
+    @IBOutlet weak var departure: UITextField!
+    @IBOutlet weak var carMake: UITextField!
+    @IBOutlet weak var carModel: UITextField!
+    @IBOutlet weak var license: UITextField!
+    
+    
+    
+    
+
+    
+    let publicDatabase = CKContainer.default().publicCloudDatabase
+    
+    var trip: CKRecord?
+    
+    weak var tripDelegate: TripDelegate?
+    
+    @IBAction func joinTrip(_ sender: Any) {
+    
+        
+    
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.backgroundColor = .white
+        
+        //firstName.delegate = self
+        
+        firstName.text = trip?.object(forKey: "firstName") as? String
         // Do any additional setup after loading the view.
     }
 
@@ -32,4 +71,11 @@ class TripViewController: UIViewController {
     }
     */
 
+}
+
+extension TripViewController: UITextFieldDelegate {
+    func labelShouldReturn(_ label: UILabel) -> Bool {
+        label.resignFirstResponder()
+        return true
+    }
 }
