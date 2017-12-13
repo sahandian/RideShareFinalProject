@@ -109,9 +109,9 @@ extension RideViewController: UITableViewDataSource {
     }
 }
 
-/*extension RideViewController: UITableViewDelegate {
+extension RideViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showExpense", sender: self)
+        performSegue(withIdentifier: "showTrip", sender: self)
     }
-}*/
+}
 

@@ -20,6 +20,7 @@
 		5D1CE51D1FB4DCF5005DE0FF /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */; };
 		5D1CE5621FDDF1E2005DE0FF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1CE5611FDDF1E2005DE0FF /* CloudKit.framework */; };
 		5D8239811FE0BE5A00BCEF8A /* RideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8239801FE0BE5A00BCEF8A /* RideViewController.swift */; };
+		5D8239831FE1067200BCEF8A /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8239821FE1067200BCEF8A /* TripViewController.swift */; };
 		5DB0B2011FDDF9D10032B2B9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB0B2001FDDF9D10032B2B9 /* SearchViewController.swift */; };
 		5DB0B2031FDDFBA10032B2B9 /* DriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB0B2021FDDFBA10032B2B9 /* DriveViewController.swift */; };
 		5F5F060E1FE0AC6400EAC738 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5F060D1FE0AC6400EAC738 /* ProfileViewController.swift */; };
@@ -67,6 +68,7 @@
 		5D1CE55F1FDDF1C3005DE0FF /* RideShareFinalProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RideShareFinalProject.entitlements; sourceTree = "<group>"; };
 		5D1CE5611FDDF1E2005DE0FF /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		5D8239801FE0BE5A00BCEF8A /* RideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideViewController.swift; sourceTree = "<group>"; };
+		5D8239821FE1067200BCEF8A /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
 		5DB0B2001FDDF9D10032B2B9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5DB0B2021FDDFBA10032B2B9 /* DriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveViewController.swift; sourceTree = "<group>"; };
 		5F5F060D1FE0AC6400EAC738 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				5D1CE51A1FB4DA40005DE0FF /* User.swift */,
 				5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */,
 				5D1CE4ED1FB4D894005DE0FF /* Main.storyboard */,
+				5D8239821FE1067200BCEF8A /* TripViewController.swift */,
 				5DB0B2021FDDFBA10032B2B9 /* DriveViewController.swift */,
 				5D8239801FE0BE5A00BCEF8A /* RideViewController.swift */,
 				5DB0B2001FDDF9D10032B2B9 /* SearchViewController.swift */,
@@ -327,6 +330,7 @@
 				5D1CE4EC1FB4D894005DE0FF /* ViewController.swift in Sources */,
 				5F5F060E1FE0AC6400EAC738 /* ProfileViewController.swift in Sources */,
 				BFA365391FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift in Sources */,
+				5D8239831FE1067200BCEF8A /* TripViewController.swift in Sources */,
 				5D1CE4EA1FB4D894005DE0FF /* AppDelegate.swift in Sources */,
 				2E30ADF71FD9D29A0080CAD0 /* DriveTableViewCell.swift in Sources */,
 				BFFDBBC51FD86C2000921CC2 /* DashBoardViewController.swift in Sources */,
