@@ -65,7 +65,7 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    //for date picker for depature
+    //for date picker for time
     let timePicker = UIDatePicker()
     
     func createTimePicker(){
