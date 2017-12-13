@@ -31,7 +31,7 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0{
-            if trip.count < 4{
+            if trip.count < 4 && trip.count >= 0{
                 return trip.count
             }else{
                 return 3
@@ -136,6 +136,7 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
                     guard let records = records else{ return }
                     self.trip = records
                     DispatchQueue.main.async{
+                        print(self.trip.count)
                         self.tableView.reloadData()
                     }
                 }
