@@ -10,10 +10,10 @@ import UIKit
 import CloudKit
 
 class RideViewController: UIViewController {
-
+    
     @IBOutlet weak var tripsTableView: UITableView!
     
-
+    
     let publicDatabase = CKContainer.default().publicCloudDatabase
     
     var trips = [CKRecord]()
@@ -32,15 +32,15 @@ class RideViewController: UIViewController {
                 //print(trips?.count)
                 
                 self.trips = trips ?? []
-   
+                
                 self.tripsTableView.reloadData()
-                }
+            }
             }
             
         }
-
-    }
         
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         
         guard let destination = segue.destination as? TripViewController else{
@@ -56,56 +56,56 @@ class RideViewController: UIViewController {
     
     
     /*
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.trips.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tripsTableView.dequeueReusableCell(withIdentifier: "tripCell", for: indexPath)
-        
-        let trip = trips[indexPath.row]
-        
-        cell.textLabel?.text = trip.object(forKey: "firstName") as? String
-        
-       
-        
-        
-        return cell
-    }
-    */
-  /*  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showExpense", sender: self)
-    }
- */
-//
-//    override func viewWillAppear(_ animated: Bool) {
-//        queryTrips()
-//    }
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     return self.trips.count
+     }
+     
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     let cell = tripsTableView.dequeueReusableCell(withIdentifier: "tripCell", for: indexPath)
+     
+     let trip = trips[indexPath.row]
+     
+     cell.textLabel?.text = trip.object(forKey: "firstName") as? String
+     
+     
+     
+     
+     return cell
+     }
+     */
+    /*  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     performSegue(withIdentifier: "showExpense", sender: self)
+     }
+     */
+    //
+    //    override func viewWillAppear(_ animated: Bool) {
+    //        queryTrips()
+    //    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        
+        
         queryTrips()
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension RideViewController: UITableViewDataSource {
@@ -137,3 +137,5 @@ extension RideViewController: TripDelegate {
         self.tripsTableView?.reloadData()
     }
 }
+
+
