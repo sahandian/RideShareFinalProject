@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E30ADF71FD9D29A0080CAD0 /* DriveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E30ADF61FD9D29A0080CAD0 /* DriveTableViewCell.swift */; };
+		2E9A3BE61FE1F9F700264EA4 /* TripInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5C44EA1FDA8D6400FE8E4F /* TripInformationViewController.swift */; };
 		5D1CE4EA1FB4D894005DE0FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE4E91FB4D894005DE0FF /* AppDelegate.swift */; };
 		5D1CE4EC1FB4D894005DE0FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE4EB1FB4D894005DE0FF /* ViewController.swift */; };
 		5D1CE4EF1FB4D894005DE0FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1CE4ED1FB4D894005DE0FF /* Main.storyboard */; };

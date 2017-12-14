@@ -114,7 +114,7 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
             case "showTripInfomation":
                 if let cell = sender as? DashBoardTableViewCell{
                     if let indexPath = tableView.indexPath(for: cell){
-                        if let segueMCV = segue.destination as? TripInformationViewController{
+                        if let segueMCV = segue.destination as? TripInformationViewController {
                             let data = trip[indexPath.row]
                             segueMCV.tripModel = data
                         }
