@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var login: UIButton!
    
     @IBAction func login(_ sender: Any) {
-        if (loginTextField.text == "")
+        if (loginTextField.text == "lol")
         {
             self.errorMessage.textColor = UIColor.red
             self.errorMessage.text = "Invalid Email!"

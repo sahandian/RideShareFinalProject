@@ -92,7 +92,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             
         } else {
         
-        self.errorMessage.isHidden = true
+        //self.errorMessage.isHidden = true
         print("Save button clicked")
             let alert = UIAlertController(title: "Saved Successfully!", message: nil, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
