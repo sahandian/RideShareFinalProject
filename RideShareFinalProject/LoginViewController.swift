@@ -21,10 +21,21 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginTextField: UITextField!
     
+    @IBOutlet weak var errorMessage: UILabel!
     @IBOutlet weak var login: UIButton!
    
     @IBAction func login(_ sender: Any) {
+        if (loginTextField.text == "")
+        {
+            self.errorMessage.textColor = UIColor.red
+            self.errorMessage.text = "Invalid Email!"
+            self.errorMessage.isHidden = false
+            
+        } else {
+        
+        self.errorMessage.isHidden = true
         performSegue(withIdentifier: "login", sender: self)
+        }
     }
     
     override func viewDidLoad() {

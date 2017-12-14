@@ -1355,14 +1355,22 @@
                                     <segue destination="pRG-Zu-yyh" kind="show" id="h17-Ii-Yjl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcc-Cz-J70">
+                                <rect key="frame" x="166" y="426" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aLr-CM-y1h" firstAttribute="trailing" secondItem="c5z-XC-arZ" secondAttribute="trailing" constant="20" id="3Ih-NS-DDo"/>
                             <constraint firstItem="bXX-lC-NwA" firstAttribute="top" secondItem="c5z-XC-arZ" secondAttribute="bottom" constant="20" id="Ayt-iy-aUb"/>
+                            <constraint firstItem="kcc-Cz-J70" firstAttribute="centerX" secondItem="aLr-CM-y1h" secondAttribute="centerX" id="BYA-86-r5I"/>
                             <constraint firstItem="c5z-XC-arZ" firstAttribute="centerX" secondItem="aLr-CM-y1h" secondAttribute="centerX" id="KNq-6t-vX9"/>
                             <constraint firstItem="c5z-XC-arZ" firstAttribute="leading" secondItem="aLr-CM-y1h" secondAttribute="leading" constant="20" id="UvR-iw-l6x"/>
                             <constraint firstItem="jo2-Pk-Tl2" firstAttribute="centerX" secondItem="aLr-CM-y1h" secondAttribute="centerX" id="VPK-Ja-cQO"/>
+                            <constraint firstItem="kcc-Cz-J70" firstAttribute="top" secondItem="bXX-lC-NwA" secondAttribute="bottom" constant="20" id="cXa-S1-6RA"/>
                             <constraint firstItem="bXX-lC-NwA" firstAttribute="centerX" secondItem="aLr-CM-y1h" secondAttribute="centerX" id="hRd-3h-3xV"/>
                             <constraint firstItem="c5z-XC-arZ" firstAttribute="top" secondItem="jo2-Pk-Tl2" secondAttribute="bottom" constant="10" id="hlL-N9-anc"/>
                             <constraint firstItem="c5z-XC-arZ" firstAttribute="centerY" secondItem="aLr-CM-y1h" secondAttribute="centerY" id="nNZ-N7-pVC"/>
@@ -1371,6 +1379,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="IuX-8O-H54"/>
                     <connections>
+                        <outlet property="errorMessage" destination="kcc-Cz-J70" id="Sgc-fq-OhZ"/>
                         <outlet property="login" destination="bXX-lC-NwA" id="8Xe-aA-3qX"/>
                         <outlet property="loginTextField" destination="c5z-XC-arZ" id="Pfr-Av-DkV"/>
                     </connections>

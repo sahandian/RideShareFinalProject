@@ -88,6 +88,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
             
         } else {
         
+        self.errorMessage.isHidden = true
         print("Save button clicked")
         let profile = CKRecord(recordType: "Profile")
         profile.setValue(profileFirstName.text!, forKey: "profileFirstName")
