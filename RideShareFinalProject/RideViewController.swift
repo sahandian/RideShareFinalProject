@@ -19,7 +19,7 @@ class RideViewController: UIViewController {
     var trips = [CKRecord]()
     
     
-    func queryTrips(){
+    @objc func queryTrips(){
         let predicate = NSPredicate(format: "seatsAvailable > 0")
         
         let query = CKQuery(recordType: "Trip", predicate: predicate)
@@ -86,6 +86,8 @@ class RideViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        queryTrips()
         refresher = UIRefreshControl()
         refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refresher.addTarget(self, action: #selector(RideViewController.queryTrips), for: UIControlEvents.valueChanged)
