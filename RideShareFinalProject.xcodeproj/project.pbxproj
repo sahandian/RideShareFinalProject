@@ -53,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		2E30ADF61FD9D29A0080CAD0 /* DriveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveTableViewCell.swift; sourceTree = "<group>"; };
+		2E9A3BEF1FE209DA00264EA4 /* TripInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInfoViewController.swift; sourceTree = "<group>"; };
 		5D1CE4E61FB4D894005DE0FF /* RideShareFinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RideShareFinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1CE4E91FB4D894005DE0FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D1CE4EB1FB4D894005DE0FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +144,7 @@
 				BF4FD3741FD735E200515C59 /* DashBoardTableViewCell.swift */,
 				BFA365381FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift */,
 				BFFDBBC41FD86C2000921CC2 /* DashBoardViewController.swift */,
+				2E9A3BEF1FE209DA00264EA4 /* TripInfoViewController.swift */,
 				5D1CE51A1FB4DA40005DE0FF /* User.swift */,
 				5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */,
 				5D1CE4ED1FB4D894005DE0FF /* Main.storyboard */,
@@ -336,6 +338,7 @@
 				5D8239811FE0BE5A00BCEF8A /* RideViewController.swift in Sources */,
 				5D1CE51B1FB4DA40005DE0FF /* User.swift in Sources */,
 				BF4FD3751FD735E200515C59 /* DashBoardTableViewCell.swift in Sources */,
+				2E9A3BF01FE209DA00264EA4 /* TripInfoViewController.swift in Sources */,
 				5D1CE4F21FB4D894005DE0FF /* RideShareFinalProject.xcdatamodeld in Sources */,
 				5D8E0AEE1FE1494200A50650 /* ResultsViewController.swift in Sources */,
 				5D8E0AEA1FE13DDD00A50650 /* TripDelegate.swift in Sources */,
@@ -355,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E9A3BE71FE2073F00264EA4 /* TripInformationViewController.swift in Sources */,
 				5D1CE5021FB4D894005DE0FF /* RideShareFinalProjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E9A3BE81FE2074000264EA4 /* TripInformationViewController.swift in Sources */,
 				5D1CE50D1FB4D895005DE0FF /* RideShareFinalProjectUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
