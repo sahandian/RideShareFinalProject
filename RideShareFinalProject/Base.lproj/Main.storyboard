@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LWz-Dz-mhf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LWz-Dz-mhf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,7 +15,7 @@
         <scene sceneID="CqH-2X-FPu">
             <objects>
                 <navigationController id="BBf-SR-nbu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ride" id="v6K-LW-pnq"/>
+                    <tabBarItem key="tabBarItem" title="Ride" image="passenger" selectedImage="passenger" id="v6K-LW-pnq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bjU-4D-9c2">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -918,7 +918,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f2U-6H-sF7"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="gFz-6v-AJW"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="customer" selectedImage="customer" id="gFz-6v-AJW"/>
                     <connections>
                         <outlet property="errorMessage" destination="jaB-Ds-qqG" id="Ttr-bt-q5k"/>
                         <outlet property="profileBio" destination="7UG-mr-wFa" id="3hj-0b-AfV"/>
@@ -1479,7 +1479,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exampleImage1.png" translatesAutoresizingMaskIntoConstraints="NO" id="V4n-ab-63Z">
-                                                    <rect key="frame" x="15" y="29" width="50" height="50"/>
+                                                    <rect key="frame" x="8" y="29" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="LYg-Jh-lQ6"/>
                                                         <constraint firstAttribute="height" constant="50" id="frv-Ne-2si"/>
@@ -1492,7 +1492,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" text="message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Frb-tM-LRL">
-                                                    <rect key="frame" x="105" y="18" width="157" height="78"/>
+                                                    <rect key="frame" x="98" y="18" width="164" height="78"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -1775,8 +1775,8 @@
                     <connections>
                         <segue destination="qfd-No-jxe" kind="relationship" relationship="viewControllers" id="SUt-CO-zYZ"/>
                         <segue destination="BBf-SR-nbu" kind="relationship" relationship="viewControllers" id="OcR-KT-Cnb"/>
-                        <segue destination="ZlN-Qr-PzX" kind="relationship" relationship="viewControllers" id="Z1j-E4-7aI"/>
                         <segue destination="Cm1-Qd-yDC" kind="relationship" relationship="viewControllers" id="qhH-mo-Aam"/>
+                        <segue destination="ZlN-Qr-PzX" kind="relationship" relationship="viewControllers" id="Z1j-E4-7aI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kaN-Zb-Teo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1787,7 +1787,7 @@
         <scene sceneID="d87-Pn-PFh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qfd-No-jxe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dashboard" badgeValue="0" id="ReG-vW-c1c">
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="dashboard" badgeValue="0" selectedImage="dashboard" id="ReG-vW-c1c">
                         <color key="badgeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -1808,7 +1808,7 @@
         <scene sceneID="goo-YI-WQM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cm1-Qd-yDC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Drive" id="xul-SG-BBt"/>
+                    <tabBarItem key="tabBarItem" title="Drive" image="icons8-steering-wheel-filled-25" selectedImage="icons8-steering-wheel-filled-25" id="xul-SG-BBt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6mu-hV-fHW">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1827,7 +1827,11 @@
     <resources>
         <image name="Profile_Selected" width="32" height="32"/>
         <image name="arrow.png" width="960" height="480"/>
+        <image name="customer" width="25" height="25"/>
+        <image name="dashboard" width="25" height="25"/>
         <image name="exampleImage1.png" width="1000" height="640"/>
+        <image name="icons8-steering-wheel-filled-25" width="25" height="25"/>
+        <image name="passenger" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Hgi-cN-IWz"/>

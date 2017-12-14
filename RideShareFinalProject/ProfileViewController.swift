@@ -82,14 +82,21 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
         
         if (profileFirstName.text == "" || profileLastName.text == "" || profileEmail.text == "" || profileSchool.text == "" || profileMajor.text == "" || profileClass.text == "" || profileBirthday.text == "" || profileBio.text == "")
         {
-            self.errorMessage.textColor = UIColor.red
-            self.errorMessage.text = "Invalid Entry"
-            self.errorMessage.isHidden = false
+//            self.errorMessage.textColor = UIColor.red
+//            self.errorMessage.text = "Invalid Entry"
+//            self.errorMessage.isHidden = false
+            let alert = UIAlertController(title: "Invalid Entry", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            
             
         } else {
         
         self.errorMessage.isHidden = true
         print("Save button clicked")
+            let alert = UIAlertController(title: "Saved Successfully!", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            present(alert, animated: true, completion: nil)
         let profile = CKRecord(recordType: "Profile")
         profile.setValue(profileFirstName.text!, forKey: "profileFirstName")
         profile.setValue(profileLastName.text!, forKey: "profileLastName")
