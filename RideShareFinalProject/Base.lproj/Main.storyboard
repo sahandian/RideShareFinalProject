@@ -1345,6 +1345,7 @@
                                 <rect key="frame" x="168" y="376" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
+                                    <action selector="login:" destination="beo-7d-Ns5" eventType="touchUpInside" id="6YW-I7-eNH"/>
                                     <segue destination="pRG-Zu-yyh" kind="show" id="h17-Ii-Yjl"/>
                                 </connections>
                             </button>
