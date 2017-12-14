@@ -123,10 +123,9 @@ class TripViewController: UIViewController {
         
         publicDatabase.add(operation)
         
-      
-        
-        
-        
+        let alert = UIAlertController(title: "Save!", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     /*
