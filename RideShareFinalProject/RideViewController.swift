@@ -120,6 +120,10 @@ extension RideViewController: UITableViewDataSource {
         
         cell.textLabel?.text = trip.object(forKey: "firstName") as? String
         
+        let text = (trip.object(forKey: "city") as? String ?? "") + "\t -> " + (trip.object(forKey: "city2") as? String ?? "")
+        
+        cell.detailTextLabel?.text = text
+
         return cell
     }
 }
