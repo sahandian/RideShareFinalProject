@@ -19,7 +19,11 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        retieveData()
+        let refresher = UIRefreshControl()
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refresher.addTarget(self, action: #selector(self.retieveData), for: UIControlEvents.valueChanged)
+        self.tableView.refreshControl = refresher
+        retieveData(isCreated: true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -54,7 +58,7 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
         }else{
             deque = tableView.dequeueReusableCell(withIdentifier: "notificationCell", for: indexPath)
             if let cell = deque as? DashBoardNotificationTableViewCell{
-                cell.infoTobeShown = "Data setted"
+                cell.infoToBeShown = "Data setted"
             }
         }
         return deque
@@ -98,11 +102,9 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
     // Switching between views
     @IBAction func viewPastActionsToggle(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0{
-            
+            retieveData(isCreated: true)
         }else if sender.selectedSegmentIndex == 1{
-            
-        }else{
-            
+            retieveData(isCreated: false)
         }
     }
    
@@ -110,6 +112,9 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
         if let identifier = segue.identifier{
             switch identifier{
             case "showMoreUpComingEvents":
+                if let segueMCV = segue.destination as? showMoreViewController {
+                    segueMCV.tripInShowMore = trip
+                }
                 break
             case "showTripInfomation":
                 if let cell = sender as? DashBoardTableViewCell{
@@ -126,10 +131,16 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
             }
         }
     }
-    func retieveData(){
+    @objc func retieveData(isCreated: Bool){
         CKContainer(identifier: "iCloud.edu.mail.missouri.RideShareFinalProject").fetchUserRecordID { (userRecordID, error) in
-           // let predicate = NSPredicate(format: "creatorUserRecordID = %@", userRecordID!)
-            let predicate = NSPredicate(format: "riders CONTAINS %@", self.email)
+            //let predicate: NSPredicate
+            let predicate: NSPredicate
+            if isCreated == true{
+                predicate = NSPredicate(format: "creatorUserRecordID = %@", userRecordID!)
+            }else{
+                print(self.email)
+                predicate = NSPredicate(format: "riders CONTAINS %@", self.email)
+            }
             let query = CKQuery(recordType: "Trip", predicate: predicate)
             let db = CKContainer(identifier: "iCloud.edu.mail.missouri.RideShareFinalProject").publicCloudDatabase
             db.perform(query, inZoneWith: nil) { (records, error) in
@@ -138,6 +149,7 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
                     self.trip = records
                     DispatchQueue.main.async{
                         self.tableView.reloadData()
+                        self.tableView.refreshControl?.endRefreshing()
                     }
                 }
             }

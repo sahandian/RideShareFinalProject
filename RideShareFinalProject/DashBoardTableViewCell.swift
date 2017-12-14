@@ -32,7 +32,7 @@ class DashBoardTableViewCell: UITableViewCell {
             formatter.dateStyle = .short
             formatter.timeStyle = .none
             date.text = formatter.string(from: depart)
-            formatter.timeStyle = .none
+            formatter.dateStyle = .none
             formatter.timeStyle = .short
             departureTime.text = formatter.string(from: time)
     }

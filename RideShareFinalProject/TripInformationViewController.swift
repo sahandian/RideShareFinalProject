@@ -28,17 +28,45 @@ class TripInformationViewController: UIViewController {
     private func updateUI(){
         if email != nil{
             let firstName = (tripModel?["firstName"] as! String)
-            let full = firstName + (tripModel?["lasName"] as! String)
+            let full = firstName + " " +  (tripModel?["lasName"] as! String)
             fullName.text = full
             email.text = (tripModel?["email"] as! String)
-            start.text = (tripModel?["address"] as! String)
-            destination.text = (tripModel?["address2"] as! String)
-            let departureTime = (tripModel?["departure"] as! Date)
+            let adress = (tripModel?["address"] as! String)
+            let city = (tripModel?["city"] as! String)
+            let state = (tripModel?["state"] as! String)
+            let zip = (tripModel?["zip"] as! String)
+            let fullAddress = adress + " " + city + ", " + state + " " + zip
+            start.text = fullAddress
+            
+            let adress2 = (tripModel?["address2"] as! String)
+            let city2 = (tripModel?["city2"] as! String)
+            let state2 = (tripModel?["state2"] as! String)
+            let zip2 = (tripModel?["zip2"] as! String)
+            let fullAddress2 = adress2 + " " + city2 + ", " + state2 + " " + zip2
+            destination.text = fullAddress2
+            
+            
             let formatter = DateFormatter()
             formatter.dateStyle = .short
-            formatter.dateStyle = .short
-            departure.text = formatter.string(from: departureTime)
-            carModel.text = (tripModel?["carModel"] as! String)
+            formatter.timeStyle = .none
+            let departureTime = formatter.string(from:(tripModel?["departure"] as! Date))
+            
+
+            formatter.dateStyle = .none
+            formatter.timeStyle = .short
+            let time = formatter.string(from:(tripModel?["time"] as! Date))
+
+            let fullTime = departureTime + "\t" + time
+            departure.text = fullTime
+            
+            let car = (tripModel?["carModel"] as! String)
+            let carMake = (tripModel?["carMake"] as! String)
+            let carLicense = (tripModel?["license"] as! String)
+            let carYear = (tripModel?["carYear"] as! Int64)
+            
+            let carFull = carMake + " " + car + " " + String(carYear) + " \nLicense: " + carLicense
+                
+            carModel.text = carFull
         }
     }
     

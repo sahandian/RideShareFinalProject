@@ -86,10 +86,6 @@ class TripViewController: UIViewController {
         license.text = trip?.object(forKey: "license") as? String
         
         
-        
-        
- 
-        
         // Do any additional setup after loading the view.
     }
     
