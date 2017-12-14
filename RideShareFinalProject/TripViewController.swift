@@ -31,6 +31,14 @@ class TripViewController: UIViewController {
     
     let publicDatabase = CKContainer(identifier: "iCloud.edu.mail.missouri.RideShareFinalProject").publicCloudDatabase
     
+    //let dateFormatter = DateFormatter()
+    let dateFormatter: DateFormatter = { () -> DateFormatter in
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .long
+        return formatter
+    }()
+    
     var trip: CKRecord?
     
     weak var tripDelegate: TripDelegate?
@@ -69,10 +77,18 @@ class TripViewController: UIViewController {
         city2.text = trip?.object(forKey: "city2") as? String
         state2.text = trip?.object(forKey: "state2") as? String
         zip2.text = trip?.object(forKey: "zip2") as? String
-        departure.text = trip?.object(forKey: "departure") as? String
+        
+        let dateTest = trip?.object(forKey: "departure") as? Date
+        departure.text = dateFormatter.string(from: dateTest!)
+        
         carModel.text = trip?.object(forKey: "carModel") as? String
         carMake.text = trip?.object(forKey: "carMake") as? String
         license.text = trip?.object(forKey: "license") as? String
+        
+        
+        
+        
+ 
         
         // Do any additional setup after loading the view.
     }

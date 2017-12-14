@@ -34,6 +34,10 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var carYear: UITextField!
     @IBOutlet weak var license: UITextField!
     @IBOutlet weak var nameLabel: UITextField!
+    @IBOutlet weak var errorMessage: UILabel!
+    
+    
+    
     
     //for date picker for depature
     let datePicker = UIDatePicker()
@@ -120,7 +124,16 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
-        print("Records Saved!")
+        
+        if (firstName.text == "" || lastName.text == "" || email.text == "" || departure.text == "" || time.text == "" || address.text == "" || city.text == "" || state.text == "" || zip.text == "" || address2.text == "" || city2.text == "" || state2.text == "" || seatsAvailable.text == "" || carMake.text == "" || carModel.text == "" || carYear.text == "" || license.text == "")
+        {
+            self.errorMessage.textColor = UIColor.red
+            self.errorMessage.text = "Invalid Entry"
+            self.errorMessage.isHidden = false
+            
+        } else {
+            
+        self.errorMessage.isHidden = true
         let trip = CKRecord(recordType: "Trip")
         var riders = [String]()
         riders.append(email.text!)
@@ -151,6 +164,7 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
         trip.setValue(carYearInt, forKey: "carYear")
         trip.setValue(license.text!, forKey: "license")
         
+        
         let publicDatabase = CKContainer(identifier: "iCloud.edu.mail.missouri.RideShareFinalProject").publicCloudDatabase
         publicDatabase.save(trip) {(record, error) in
             if error == nil{
@@ -177,6 +191,9 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
         carModel.text = nil
         carYear.text = nil
         license.text = nil
+    
+        }
+    
     }
 
     override func viewDidLoad() {
