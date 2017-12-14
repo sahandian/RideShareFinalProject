@@ -43,6 +43,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     @IBOutlet weak var profileBirthday: UITextField!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileBio: UITextView!
+    @IBOutlet weak var errorMessage: UILabel!
     
 
     @IBAction func profileGender(_ sender: UISegmentedControl) {
@@ -78,6 +79,15 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
+        
+        if (profileFirstName.text == "" || profileLastName.text == "" || profileEmail.text == "" || profileSchool.text == "" || profileMajor.text == "" || profileClass.text == "" || profileBirthday.text == "" || profileBio.text == "")
+        {
+            self.errorMessage.textColor = UIColor.red
+            self.errorMessage.text = "Invalid Entry"
+            self.errorMessage.isHidden = false
+            
+        } else {
+        
         print("Save button clicked")
         let profile = CKRecord(recordType: "Profile")
         profile.setValue(profileFirstName.text!, forKey: "profileFirstName")
@@ -94,6 +104,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDe
                 print("Record Saved")
                 print(record!["profileFirstName"] as! String)
             }
+        }
         }
     }
     
