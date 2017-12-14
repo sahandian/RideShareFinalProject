@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E30ADF71FD9D29A0080CAD0 /* DriveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E30ADF61FD9D29A0080CAD0 /* DriveTableViewCell.swift */; };
+		2E9A3BE61FE1F9F700264EA4 /* TripInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5C44EA1FDA8D6400FE8E4F /* TripInformationViewController.swift */; };
 		5D1CE4EA1FB4D894005DE0FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE4E91FB4D894005DE0FF /* AppDelegate.swift */; };
 		5D1CE4EC1FB4D894005DE0FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE4EB1FB4D894005DE0FF /* ViewController.swift */; };
 		5D1CE4EF1FB4D894005DE0FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1CE4ED1FB4D894005DE0FF /* Main.storyboard */; };
@@ -26,7 +27,6 @@
 		5DB0B2031FDDFBA10032B2B9 /* DriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB0B2021FDDFBA10032B2B9 /* DriveViewController.swift */; };
 		5F5F060E1FE0AC6400EAC738 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5F060D1FE0AC6400EAC738 /* ProfileViewController.swift */; };
 		BF4FD3751FD735E200515C59 /* DashBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FD3741FD735E200515C59 /* DashBoardTableViewCell.swift */; };
-		BF5C44EB1FDA8D6400FE8E4F /* TripInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5C44EA1FDA8D6400FE8E4F /* TripInformationViewController.swift */; };
 		BF762FE11FE0C1FA00024393 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF762FE01FE0C1FA00024393 /* CloudKit.framework */; };
 		BFA365371FD7D61F00466517 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA365361FD7D61F00466517 /* Default-568h@2x.png */; };
 		BFA365391FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA365381FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift */; };
@@ -330,9 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF5C44EB1FDA8D6400FE8E4F /* TripInformationViewController.swift in Sources */,
 				5DB0B2011FDDF9D10032B2B9 /* SearchViewController.swift in Sources */,
-				BF5C44EB1FDA8D6400FE8E4F /* TripInformationViewController.swift in Sources */,
 				5D1CE51D1FB4DCF5005DE0FF /* Trip.swift in Sources */,
 				5D8239811FE0BE5A00BCEF8A /* RideViewController.swift in Sources */,
 				5D1CE51B1FB4DA40005DE0FF /* User.swift in Sources */,
@@ -345,6 +343,7 @@
 				BFA365391FD7E1C100466517 /* DashBoardNotificationTableViewCell.swift in Sources */,
 				5D8239831FE1067200BCEF8A /* TripViewController.swift in Sources */,
 				5D1CE4EA1FB4D894005DE0FF /* AppDelegate.swift in Sources */,
+				2E9A3BE61FE1F9F700264EA4 /* TripInformationViewController.swift in Sources */,
 				2E30ADF71FD9D29A0080CAD0 /* DriveTableViewCell.swift in Sources */,
 				BFFDBBC51FD86C2000921CC2 /* DashBoardViewController.swift in Sources */,
 				5DB0B2031FDDFBA10032B2B9 /* DriveViewController.swift in Sources */,
