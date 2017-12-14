@@ -20,8 +20,9 @@ class RideViewController: UIViewController {
     
     
     @objc func queryTrips(){
+        let predicate = NSPredicate(format: "seatsAvailable > 0")
         
-        let query = CKQuery(recordType: "Trip", predicate: NSPredicate(value: true))
+        let query = CKQuery(recordType: "Trip", predicate: predicate)
         
         publicDatabase.perform(query, inZoneWith: nil) { (trips, error) in DispatchQueue.main.async {
             if let error = error {
@@ -85,6 +86,8 @@ class RideViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        queryTrips()
         refresher = UIRefreshControl()
         refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refresher.addTarget(self, action: #selector(RideViewController.queryTrips), for: UIControlEvents.valueChanged)
