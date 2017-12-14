@@ -103,6 +103,15 @@ class TripViewController: UIViewController {
     @IBAction func joinTripButton(_ sender: Any) {
     
         var riders = trip?.object(forKey: "riders") as? [String]
+        
+        var newSeats = trip?.object(forKey: "seatsAvailable") as? Int
+        
+        newSeats = newSeats! - 1
+        
+        let seatsValue = newSeats! as CKRecordValue
+        
+        trip?.setObject(seatsValue, forKey: "seatsAvailable")
+        
         let joinEmail = joinTripEmail.text!
         riders?.append(joinEmail)
         

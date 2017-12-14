@@ -20,8 +20,9 @@ class RideViewController: UIViewController {
     
     
     func queryTrips(){
+        let predicate = NSPredicate(format: "seatsAvailable > 0")
         
-        let query = CKQuery(recordType: "Trip", predicate: NSPredicate(value: true))
+        let query = CKQuery(recordType: "Trip", predicate: predicate)
         
         publicDatabase.perform(query, inZoneWith: nil) { (trips, error) in DispatchQueue.main.async {
             if let error = error {

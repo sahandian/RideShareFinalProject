@@ -24,7 +24,7 @@ class ResultsViewController: UIViewController {
 //    let predicate = NSPredicate(format: "city2 = %@ AND city = %@", city2, city1)
 
     func queryTrips(){
-        let predicate = NSPredicate(format: "city2 = %@ AND city = %@", city2, city1)
+        let predicate = NSPredicate(format: "city2 = %@ AND city = %@ AND seatsAvailable > 0", city2, city1)
         let query = CKQuery(recordType: "Trip", predicate: predicate)
         
         publicDatabase.perform(query, inZoneWith: nil) {
