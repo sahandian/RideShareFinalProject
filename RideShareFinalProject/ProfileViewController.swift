@@ -9,7 +9,7 @@
 import UIKit
 import CloudKit
 
-class ProfileViewController: UIViewController, UITextFieldDelegate {
+class ProfileViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         profileMajor.delegate = self
         profileClass.delegate = self
         profileBirthday.delegate = self
+        profileBio.delegate = self
         
         self.profileImage.image = UIImage(named: "Profile_Selected")
         
@@ -41,6 +42,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var profileClass: UITextField!
     @IBOutlet weak var profileBirthday: UITextField!
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileBio: UITextView!
     
 
     @IBAction func profileGender(_ sender: UISegmentedControl) {
@@ -75,9 +77,6 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
-    
-    
     @IBAction func saveButton(_ sender: UIButton) {
         print("Save button clicked")
         let profile = CKRecord(recordType: "Profile")
@@ -102,7 +101,13 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
- 
-
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
 
 }

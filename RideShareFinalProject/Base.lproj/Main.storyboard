@@ -848,6 +848,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="gFz-6v-AJW"/>
                     <connections>
+                        <outlet property="profileBio" destination="7UG-mr-wFa" id="3hj-0b-AfV"/>
                         <outlet property="profileBirthday" destination="J4J-OK-BPu" id="4f4-yQ-bom"/>
                         <outlet property="profileClass" destination="wcw-IA-B27" id="z7W-Hj-i3i"/>
                         <outlet property="profileEmail" destination="4eN-MP-458" id="bDz-Tb-x2C"/>
