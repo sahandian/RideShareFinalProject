@@ -122,9 +122,12 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
     @IBAction func saveButton(_ sender: UIButton) {
         print("Records Saved!")
         let trip = CKRecord(recordType: "Trip")
+        var riders = [String]()
+        riders.append(email.text!)
         trip.setValue(firstName.text!, forKey: "firstName")
         trip.setValue(lastName.text!, forKey: "lasName")
         trip.setValue(email.text!, forKey: "email")
+        trip.setValue(riders, forKey: "riders")
         trip.setValue(timePicker.date, forKey: "departure")
         trip.setValue(timePicker.date, forKey: "time")
         
@@ -151,9 +154,10 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
         let publicDatabase = CKContainer(identifier: "iCloud.edu.mail.missouri.RideShareFinalProject").publicCloudDatabase
         publicDatabase.save(trip) {(record, error) in
             if error == nil{
-                print("Record Saved")
+                print("Record Saved MOTHERFUCKER")
                 print(record!["firstName"] as! String)
-            }
+                
+            }else { print(error ?? print("default")) }
         }
         firstName.text = nil
         lastName.text = nil

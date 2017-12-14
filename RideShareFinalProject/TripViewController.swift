@@ -26,6 +26,7 @@ class TripViewController: UIViewController {
     @IBOutlet weak var carMake: UITextField!
     @IBOutlet weak var carModel: UITextField!
     @IBOutlet weak var license: UITextField!
+    @IBOutlet weak var joinTripEmail: UITextField!
     
     
     let publicDatabase = CKContainer(identifier: "iCloud.edu.mail.missouri.RideShareFinalProject").publicCloudDatabase
@@ -34,11 +35,7 @@ class TripViewController: UIViewController {
     
     weak var tripDelegate: TripDelegate?
     
-    @IBAction func joinTrip(_ sender: Any) {
-        
-        
-        
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,11 +77,32 @@ class TripViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func joinTripButton(_ sender: Any) {
+    
+        var riders = trip?.object(forKey: "riders") as? [String]
+        let joinEmail = joinTripEmail.text!
+        riders?.append(joinEmail)
+        
+        let ridersValue = riders! as CKRecordValue
+        
+        trip?.setObject(ridersValue, forKey: "riders")
+        
+        let operation = CKModifyRecordsOperation(recordsToSave: [trip!], recordIDsToDelete: nil)
+        
+        publicDatabase.add(operation)
+        
+      
+        
+        
+        
+    }
     
     /*
      // MARK: - Navigation

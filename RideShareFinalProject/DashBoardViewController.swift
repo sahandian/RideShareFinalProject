@@ -15,7 +15,7 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
     
     var trip = [CKRecord]()
     
-    
+    var email = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -128,7 +128,8 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
     }
     func retieveData(){
         CKContainer(identifier: "iCloud.edu.mail.missouri.RideShareFinalProject").fetchUserRecordID { (userRecordID, error) in
-            let predicate = NSPredicate(format: "creatorUserRecordID = %@", userRecordID!)
+           // let predicate = NSPredicate(format: "creatorUserRecordID = %@", userRecordID!)
+            let predicate = NSPredicate(format: "riders CONTAINS %@", self.email)
             let query = CKQuery(recordType: "Trip", predicate: predicate)
             let db = CKContainer(identifier: "iCloud.edu.mail.missouri.RideShareFinalProject").publicCloudDatabase
             db.perform(query, inZoneWith: nil) { (records, error) in

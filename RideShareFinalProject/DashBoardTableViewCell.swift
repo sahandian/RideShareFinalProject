@@ -24,8 +24,8 @@ class DashBoardTableViewCell: UITableViewCell {
         }
     }
     private func updateUI(){
-            start.text = (infoToBeShown?["state"] as! String)
-            desination.text = (infoToBeShown?["state2"] as! String)
+            start.text = (infoToBeShown?["city"] as! String)
+            desination.text = (infoToBeShown?["city2"] as! String)
             let depart = (infoToBeShown?["departure"] as! Date)
             let time = (infoToBeShown?["time"] as! Date)
             let formatter = DateFormatter()

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2E30ADF71FD9D29A0080CAD0 /* DriveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E30ADF61FD9D29A0080CAD0 /* DriveTableViewCell.swift */; };
-		2E9A3BE61FE1F9F700264EA4 /* TripInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5C44EA1FDA8D6400FE8E4F /* TripInformationViewController.swift */; };
 		5D1CE4EA1FB4D894005DE0FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE4E91FB4D894005DE0FF /* AppDelegate.swift */; };
 		5D1CE4EC1FB4D894005DE0FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE4EB1FB4D894005DE0FF /* ViewController.swift */; };
 		5D1CE4EF1FB4D894005DE0FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1CE4ED1FB4D894005DE0FF /* Main.storyboard */; };
@@ -20,6 +19,8 @@
 		5D1CE51B1FB4DA40005DE0FF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE51A1FB4DA40005DE0FF /* User.swift */; };
 		5D1CE51D1FB4DCF5005DE0FF /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */; };
 		5D5282391FE1FCAA00668BC3 /* TripInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5282381FE1FCAA00668BC3 /* TripInformationViewController.swift */; };
+		5D52823B1FE2123100668BC3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D52823A1FE2123100668BC3 /* LoginViewController.swift */; };
+		5D52823D1FE2230000668BC3 /* joinTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D52823C1FE2230000668BC3 /* joinTripViewController.swift */; };
 		5D8239811FE0BE5A00BCEF8A /* RideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8239801FE0BE5A00BCEF8A /* RideViewController.swift */; };
 		5D8239831FE1067200BCEF8A /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8239821FE1067200BCEF8A /* TripViewController.swift */; };
 		5D8E0AEA1FE13DDD00A50650 /* TripDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8E0AE91FE13DDD00A50650 /* TripDelegate.swift */; };
@@ -71,6 +72,8 @@
 		5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		5D1CE55F1FDDF1C3005DE0FF /* RideShareFinalProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RideShareFinalProject.entitlements; sourceTree = "<group>"; };
 		5D5282381FE1FCAA00668BC3 /* TripInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInformationViewController.swift; sourceTree = "<group>"; };
+		5D52823A1FE2123100668BC3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5D52823C1FE2230000668BC3 /* joinTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joinTripViewController.swift; sourceTree = "<group>"; };
 		5D8239801FE0BE5A00BCEF8A /* RideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideViewController.swift; sourceTree = "<group>"; };
 		5D8239821FE1067200BCEF8A /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
 		5D8E0AE91FE13DDD00A50650 /* TripDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				5D1CE51A1FB4DA40005DE0FF /* User.swift */,
 				5D1CE51C1FB4DCF5005DE0FF /* Trip.swift */,
 				5D1CE4ED1FB4D894005DE0FF /* Main.storyboard */,
+				5D52823C1FE2230000668BC3 /* joinTripViewController.swift */,
+				5D52823A1FE2123100668BC3 /* LoginViewController.swift */,
 				5D8E0AED1FE1494200A50650 /* ResultsViewController.swift */,
 				5D5282381FE1FCAA00668BC3 /* TripInformationViewController.swift */,
 				5D8239821FE1067200BCEF8A /* TripViewController.swift */,
@@ -331,7 +336,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D52823B1FE2123100668BC3 /* LoginViewController.swift in Sources */,
 				5DB0B2011FDDF9D10032B2B9 /* SearchViewController.swift in Sources */,
+				5D52823D1FE2230000668BC3 /* joinTripViewController.swift in Sources */,
 				5D1CE51D1FB4DCF5005DE0FF /* Trip.swift in Sources */,
 				5D8239811FE0BE5A00BCEF8A /* RideViewController.swift in Sources */,
 				5D1CE51B1FB4DA40005DE0FF /* User.swift in Sources */,
