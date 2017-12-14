@@ -101,8 +101,6 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
             
         }else if sender.selectedSegmentIndex == 1{
             
-        }else{
-            
         }
     }
    
