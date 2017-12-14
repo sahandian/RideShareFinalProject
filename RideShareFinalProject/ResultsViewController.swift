@@ -16,7 +16,7 @@ class ResultsViewController: UIViewController {
     var city2 = ""
     var city1 = ""
     
-    let publicDatabase = CKContainer.default().publicCloudDatabase
+    let publicDatabase = CKContainer(identifier: "iCloud.edu.mail.missouri.RideShareFinalProject").publicCloudDatabase
     
     var trips = [CKRecord]()
     

@@ -127,10 +127,10 @@ class DashBoardViewController: UIViewController, UITableViewDataSource,UITableVi
         }
     }
     func retieveData(){
-        CKContainer.default().fetchUserRecordID { (userRecordID, error) in
+        CKContainer(identifier: "iCloud.edu.mail.missouri.RideShareFinalProject").fetchUserRecordID { (userRecordID, error) in
             let predicate = NSPredicate(format: "creatorUserRecordID = %@", userRecordID!)
             let query = CKQuery(recordType: "Trip", predicate: predicate)
-            let db = CKContainer.default().publicCloudDatabase
+            let db = CKContainer(identifier: "iCloud.edu.mail.missouri.RideShareFinalProject").publicCloudDatabase
             db.perform(query, inZoneWith: nil) { (records, error) in
                 if error == nil{
                     guard let records = records else{ return }

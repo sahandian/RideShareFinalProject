@@ -89,7 +89,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         profile.setValue(profileMajor.text!, forKey: "profileMajor")
         profile.setValue(profileClass.text!, forKey: "profileClass")
         
-        let publicDatabase = CKContainer.default().publicCloudDatabase
+        let publicDatabase = CKContainer(identifier: "iCloud.edu.mail.missouri.RideShareFinalProject").publicCloudDatabase
         publicDatabase.save(profile) {(record, error) in
             if error == nil{
                 print("Record Saved")

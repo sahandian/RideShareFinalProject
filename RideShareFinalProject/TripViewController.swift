@@ -28,7 +28,7 @@ class TripViewController: UIViewController {
     @IBOutlet weak var license: UITextField!
     
     
-    let publicDatabase = CKContainer.default().publicCloudDatabase
+    let publicDatabase = CKContainer(identifier: "iCloud.edu.mail.missouri.RideShareFinalProject").publicCloudDatabase
     
     var trip: CKRecord?
     

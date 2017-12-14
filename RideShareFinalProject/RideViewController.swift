@@ -14,7 +14,7 @@ class RideViewController: UIViewController {
     @IBOutlet weak var tripsTableView: UITableView!
     
     
-    let publicDatabase = CKContainer.default().publicCloudDatabase
+    let publicDatabase = CKContainer(identifier: "iCloud.edu.mail.missouri.RideShareFinalProject").publicCloudDatabase
     
     var trips = [CKRecord]()
     
