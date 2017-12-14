@@ -925,9 +925,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="10:00 am" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bXx-rY-YJq">
-                                <rect key="frame" x="162" y="188" width="81" height="30"/>
+                                <rect key="frame" x="162" y="188" width="90" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="ht8-8N-h5c"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="ht8-8N-h5c"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1147,7 +1147,6 @@
                             <constraint firstItem="iG4-AT-vo1" firstAttribute="top" secondItem="IzV-vi-oGz" secondAttribute="bottom" constant="5" id="Aji-AR-ClN"/>
                             <constraint firstItem="pbF-PP-qoO" firstAttribute="top" secondItem="rcS-xR-ax4" secondAttribute="bottom" constant="5" id="Bp3-Tt-I2f"/>
                             <constraint firstItem="72R-BD-aOZ" firstAttribute="leading" secondItem="g1j-kN-v9Q" secondAttribute="trailing" constant="5" id="DaF-LX-X51"/>
-                            <constraint firstItem="ZS1-yO-Fgn" firstAttribute="trailing" secondItem="bXx-rY-YJq" secondAttribute="trailing" constant="132" id="Ddy-Ys-Gs9"/>
                             <constraint firstItem="QEt-fQ-HPY" firstAttribute="leading" secondItem="UZz-4S-oWc" secondAttribute="trailing" constant="4" id="FLa-O6-cE7"/>
                             <constraint firstItem="ZS1-yO-Fgn" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QEt-fQ-HPY" secondAttribute="trailing" constant="39" id="GOd-WY-wUE"/>
                             <constraint firstItem="Mtu-fn-cyj" firstAttribute="top" secondItem="hWD-5h-zKh" secondAttribute="bottom" constant="10" id="HzU-7k-bCG"/>
@@ -1184,6 +1183,7 @@
                             <constraint firstItem="imn-ym-hHN" firstAttribute="top" secondItem="mPT-oA-PQi" secondAttribute="bottom" constant="14" id="cTp-wo-hHX"/>
                             <constraint firstItem="rcS-xR-ax4" firstAttribute="leading" secondItem="ZS1-yO-Fgn" secondAttribute="leading" constant="23" id="dNn-K0-6Lp"/>
                             <constraint firstItem="CZr-Ws-Iz6" firstAttribute="top" secondItem="GaV-a2-gjp" secondAttribute="bottom" constant="5" id="dv5-Fi-u6Y"/>
+                            <constraint firstItem="ZS1-yO-Fgn" firstAttribute="trailing" secondItem="bXx-rY-YJq" secondAttribute="trailing" constant="123" id="eNg-Em-49I"/>
                             <constraint firstItem="ZS1-yO-Fgn" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="72R-BD-aOZ" secondAttribute="trailing" constant="39" id="ehd-zm-sgU"/>
                             <constraint firstItem="72R-BD-aOZ" firstAttribute="top" secondItem="pbF-PP-qoO" secondAttribute="bottom" constant="5" id="euJ-84-UbF"/>
                             <constraint firstItem="2C5-RH-ixg" firstAttribute="top" secondItem="nTJ-FQ-LzU" secondAttribute="bottom" constant="5" id="f3o-yn-Rk5"/>
