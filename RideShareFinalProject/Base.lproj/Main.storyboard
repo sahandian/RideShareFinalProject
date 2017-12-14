@@ -1780,9 +1780,7 @@
         <scene sceneID="d87-Pn-PFh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qfd-No-jxe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dashboard" image="dashboard" badgeValue="0" selectedImage="dashboard" id="ReG-vW-c1c">
-                        <color key="badgeColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="dashboard" selectedImage="dashboard" id="ReG-vW-c1c"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rIf-JC-uic">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
