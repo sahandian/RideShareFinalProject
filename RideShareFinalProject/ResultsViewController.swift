@@ -96,7 +96,11 @@ extension ResultsViewController: UITableViewDataSource {
         
         let trip = trips[indexPath.row]
         
-        cell.textLabel?.text = trip.object(forKey: "firstName") as? String
+       // cell.textLabel?.text = trip.object(forKey: "firstName") as? String
+        
+        let text = (trip.object(forKey: "city") as? String ?? "") + "\t -> " + (trip.object(forKey: "city2") as? String ?? "")
+        
+        cell.detailTextLabel?.text = text
         
         return cell
     }
