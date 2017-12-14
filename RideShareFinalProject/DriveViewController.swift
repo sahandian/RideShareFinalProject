@@ -127,9 +127,10 @@ class DriveViewController: UIViewController, UITextFieldDelegate {
         
         if (firstName.text == "" || lastName.text == "" || email.text == "" || departure.text == "" || time.text == "" || address.text == "" || city.text == "" || state.text == "" || zip.text == "" || address2.text == "" || city2.text == "" || state2.text == "" || seatsAvailable.text == "" || carMake.text == "" || carModel.text == "" || carYear.text == "" || license.text == "")
         {
-            self.errorMessage.textColor = UIColor.red
-            self.errorMessage.text = "Invalid Entry"
-            self.errorMessage.isHidden = false
+            
+            let alert = UIAlertController(title: "Invalid Entry", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            present(alert, animated: true, completion: nil)
             
         } else {
             
