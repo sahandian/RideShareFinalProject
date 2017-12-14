@@ -12,7 +12,7 @@ import CloudKit
 class RideViewController: UIViewController {
     
     @IBOutlet weak var tripsTableView: UITableView!
-    
+    var refresher = UIRefreshControl()
     
     let publicDatabase = CKContainer(identifier: "iCloud.edu.mail.missouri.RideShareFinalProject").publicCloudDatabase
     
@@ -35,6 +35,7 @@ class RideViewController: UIViewController {
                 self.trips = trips ?? []
                 
                 self.tripsTableView.reloadData()
+                self.refresher.endRefreshing()
             }
             }
             
@@ -85,9 +86,10 @@ class RideViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        queryTrips()
+        refresher = UIRefreshControl()
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refresher.addTarget(self, action: #selector(RideViewController.queryTrips), for: UIControlEvents.valueChanged)
+        tripsTableView.addSubview(refresher)
         // Do any additional setup after loading the view.
     }
     
